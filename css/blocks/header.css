@@ -316,6 +316,12 @@ display: flex;
     visibility: visible;
 }
 
+@media (width <= 768px) {
+.burger-menu.is-open {
+    height: 100vh;
+}
+}
+
 .burger-menu__button--mobile {
     display: none;
 }

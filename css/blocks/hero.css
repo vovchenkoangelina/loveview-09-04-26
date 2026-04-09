@@ -251,7 +251,7 @@
 @media (width <=1050px) {
     .hero__decor-holder::after {
         height: 180px;
-        background: url(../../decor/Wave-short.svg) no-repeat bottom / cover;
+        background: url(../../decor/wave-short.svg) no-repeat bottom / cover;
     }
 }
 
