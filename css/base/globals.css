@@ -1,0 +1,44 @@
+.page {
+  font-family: var(--font-family);
+  font-weight: 300;
+  color: var(--dark-brown);
+  scroll-behavior: smooth;
+  background: var(--backgroun-color);
+}
+
+.page__body {
+  min-width: 360px;
+}
+
+.page__body--no-scroll {
+  overflow-y: hidden;
+}
+
+.container {
+  width: min(var(--container-width), 100% - var(--container-padding) * 2);
+  margin-inline: auto;
+}
+
+img {
+  object-fit: cover;
+}
+
+a {
+    color: var(--dark-brown);
+    transition: color var(--transition-time);
+}
+
+a:hover {
+    color: var(--brown-darken);
+}
+
+.button {
+  border: 1px solid var(--brown-darken);
+border-radius: 80px;
+transition: color var(--transition-time);
+color: var(--dark-brown);
+}
+
+.button:hover {
+color: var(--brown-darken);
+}
