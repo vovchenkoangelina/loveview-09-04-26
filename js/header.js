@@ -17,11 +17,10 @@ export function initHeaderMenu() {
 
     menuBtn?.classList.add('is-active');
     mobileMenuBtn?.classList.add('is-active');
-
     mobileLogo?.classList.add('is-visible');
 
     document.body.style.overflow = 'hidden';
-    document.body.style.touchAction = isOpen ? 'none' : '';
+    document.body.style.touchAction = 'none';
   };
 
   const closeMenu = () => {
@@ -30,20 +29,22 @@ export function initHeaderMenu() {
 
     menuBtn?.classList.remove('is-active');
     mobileMenuBtn?.classList.remove('is-active');
-
     mobileLogo?.classList.remove('is-visible');
 
     document.body.style.overflow = '';
+    document.body.style.touchAction = '';
   };
 
   const toggleMenu = () => {
-    burgerMenu.classList.contains('is-open') ? closeMenu() : openMenu();
+    if (burgerMenu.classList.contains('is-open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
   };
 
   menuBtn?.addEventListener('click', toggleMenu);
-
   mobileMenuBtn?.addEventListener('click', toggleMenu);
-
   overlay.addEventListener('click', closeMenu);
 
   document.addEventListener('keydown', (e) => {
@@ -62,11 +63,9 @@ export function initHeaderMenu() {
 
   burgerMenu.addEventListener('touchend', () => {
     const diff = startY - currentY;
-
     if (diff > 50) {
       closeMenu();
     }
-
     isSwiping = false;
   });
 }
