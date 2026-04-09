@@ -116,6 +116,7 @@
     display: block;
     width: 80px;
     height: 80px;
+    transition: display var(--transition-time) ease-out, opacity var(--transition-time) ease-out;
 }
 
 @media (width <= 1000px) {
@@ -127,6 +128,26 @@
 
 .perks__slider-nav-button--next .perks__slider-icon {
     transform: rotate(180deg);
+}
+
+.perks__slider-nav-button--next .perks__slider-icon--hover {
+    transform: rotate(180deg);
+}
+
+.perks__slider-icon--hover {
+    display: none;
+    opacity: 0;
+    transition: display var(--transition-time) ease-out, opacity var(--transition-time) ease-out;
+}
+
+.perks__slider-nav-button:hover .perks__slider-icon {
+    display: none;
+    opacity: 0;
+}
+
+.perks__slider-nav-button:hover .perks__slider-icon--hover {
+    display: block;
+    opacity: 1;
 }
 
 .perks__slider-fraction {
