@@ -1,6 +1,7 @@
 .hero {
     position: relative;
     transition: height var(--transition-time) ease-out, min-height var(--transition-time) ease-out;
+    overflow: hidden;
 }
 
 .hero::after {
