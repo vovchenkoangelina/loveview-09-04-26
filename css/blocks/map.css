@@ -1,0 +1,113 @@
+.map {
+    position: relative;
+    background: url(../../images/map-img.png) no-repeat top left / auto;
+}
+.map__zoom-button {
+    position: absolute;
+    top: 363px;
+    left: 1079px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--brand-brown);
+    border-radius: 100%;
+    border: 1px solid var(--middle-brown);;
+background: var(--white);
+}
+.map__zoom-icon {
+    flex-shrink: 0;
+}
+.map__container {
+    padding: 200px 81px 90px;
+    display: flex;
+    justify-content: flex-end;
+}
+.map__inner {
+    max-width: 33%;
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+}
+.map__title {
+    font-family: var(--second-family);
+font-size: 36px;
+line-height: 124%;
+letter-spacing: 0.01em;
+text-transform: uppercase;
+color: var(--dark-brown);
+text-wrap: balance;
+}
+.map__info {
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+}
+.map__walking {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.map__walking-icons-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.map__walking-icon {
+    shape-rendering: geometricPrecision;
+    transform: translateZ(0);
+}
+.map__walking-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.map__walking-list-item {
+    font-size: 20px;
+color: var(--dark-brown);
+display: flex;
+justify-content: space-between;
+}
+.map__walking-list-item-name {}
+.map__walking-list-item-time {}
+.map__car {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.map__car-icons-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.map__car-icon {}
+.map__car-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.map__car-list-item {
+        font-size: 20px;
+color: var(--dark-brown);
+display: flex;
+justify-content: space-between;
+}
+.map__car-list-item-name {}
+.map__car-list-item-time {}
+.map__button {
+    width: 100%;
+    padding-block: 16px;
+    font-weight: 400;
+font-size: 18px;
+text-transform: uppercase;
+display: flex;
+gap: 15px;
+justify-content: center;
+align-items: center;
+background: var(--white);
+}
+.map__button-icon {
+    width: 32px;
+    height: 32px;
+}
+.map__button-text {}
