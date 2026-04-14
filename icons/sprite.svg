@@ -44,8 +44,18 @@
   />
 </symbol>
 
-<symbol id="icon-cross" viewBox="0 0 24 24">
+<!-- <symbol id="icon-cross" viewBox="0 0 24 24">
  <path d="M0.353516 23.3535L23.3528 0.353516M23.3535 23.3535L0.354234 0.353518" stroke="currentColor" />
+</symbol> -->
+
+<symbol id="icon-cross" viewBox="0 0 15 15">
+  <path
+    d="M1 1L14 14M14 1L1 14"
+    stroke="currentColor"
+    stroke-width="1"
+    stroke-linecap="round"
+    vector-effect="non-scaling-stroke"
+  />
 </symbol>
 
 <symbol id="icon-phone" viewBox="0 0 26 26">

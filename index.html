@@ -330,13 +330,17 @@
 
   <!-- Секция с картой -->
   <section class="map">
+    </div>
     <button class="map__zoom-button" data-popup-open="map-popup">
       <svg class="map__zoom-icon" width="25" height="25" viewBox="0 0 25 25" aria-hidden="true">
         <use href="./icons/sprite.svg#icon-loupe"></use>
       </svg>
     </button>
     <div class="map__scroll">
+      <div class="map__inner-scroll">
       <img class="map__img" src="./images/map-tablet.png" alt="">
+      <div class="map__zoom-area"></div> 
+      </div>
     </div>
     <div class="map__hand-icon-wrapper">
       <svg class="map__hand-icon" width="19" height="26" viewBox="0 0 19 26" aria-hidden="true">

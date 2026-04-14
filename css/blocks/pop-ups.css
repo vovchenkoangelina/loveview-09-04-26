@@ -99,10 +99,20 @@
 }
 }
 
-#map-popup .popup__close-icon {
-  width: 16px;
-  height: 16px;
+#map-popup .popup__close {
+  display: flex;
+    justify-content: center;
+    align-items: center;
   transition: transform var(--transition-time) ease-out, color var(--transition-time) ease-out;
+}
+
+#map-popup .popup__close-icon {
+transition: transform var(--transition-time) ease-out;
+}
+
+#map-popup .popup__close-icon--cross {
+  width: 15px;
+  height: 15px;
 }
 
 #map-popup .popup__close--loupe {
@@ -120,17 +130,14 @@
 }
 
 #map-popup .popup__close--loupe {
-  display: flex;
-    justify-content: center;
-    align-items: center;
     color: var(--brand-brown);
     border: 1px solid var(--middle-brown);;
 background: var(--white);
 }
 }
 
-#map-popup .popup__close-icon:hover {
-  transform: scale(1.1);
+#map-popup .popup__close:hover .popup__close-icon {
+ transform: scale(2);
 }
 
 #map-popup .popup__img--tablet {

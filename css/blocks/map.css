@@ -11,6 +11,38 @@
     }
 }
 
+.map__zoom-area {
+    position: absolute;
+    z-index: 10;
+    top: 284px;
+    left: 694px;
+    width: 428px;
+    height: 312px;
+    border: 2px solid red;
+    cursor: pointer;
+}
+
+@media (width <=768px) {
+    .map__zoom-area {
+        top: 150px;
+        left: 424px;
+        width: 302px;
+        height: 220px;
+    }
+}
+
+@media (width <=360px) {
+    .map__zoom-area {
+        top: 126px;
+        right: 36px;
+        left: auto;
+        width: 250px;
+        height: 180px;
+
+        position: absolute;
+    }
+}
+
 .map__zoom-button {
     position: absolute;
     top: 403px;
@@ -23,7 +55,6 @@
     color: var(--brand-brown);
     border-radius: 100%;
     border: 1px solid var(--middle-brown);
-    ;
     background: var(--white);
 }
 
@@ -52,55 +83,90 @@
 
 @media (width <=768px) {
     .map__scroll {
-        direction: rtl;
-        overflow-x: auto;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-        scroll-behavior: smooth;
-        scrollbar-width: none;
-    }
+    overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+
+.map__scroll::-webkit-scrollbar {
+  display: none;
+}
+
+    .map__inner-scroll {
+  position: relative;
+  width: max-content;
+}
 
     .map__img {
         direction: rtl;
         display: block;
         max-width: 768px;
+        max-height: 692px;
+        object-fit: contain;
+    }
+}
+
+@media (width <=360px) {
+    .map__img {
         max-height: 572px;
-        object-fit: contain;  
     }
 }
 
 .map__hand-icon-wrapper {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 504px;
-    width: 52px;
-    height: 52px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    backdrop-filter: blur(13px);
-    background: rgba(71, 78, 73, 0.67);
+    display: none;
 }
 
-.map__hand-icon {
-    color: var(--white);
-    fill: none;
-    width: 19px;
-    height: 26px;
-    animation: hand-swipe 4s ease-out infinite;
+@media (width <=360px) {
+    .map__hand-icon-wrapper {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 504px;
+        width: 52px;
+        height: 52px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        backdrop-filter: blur(13px);
+        background: rgba(71, 78, 73, 0.67);
+    }
+
+    .map__hand-icon {
+        color: var(--white);
+        fill: none;
+        width: 19px;
+        height: 26px;
+        animation: hand-swipe 4s ease-out infinite;
+    }
 }
 
 @keyframes hand-swipe {
-  0%   { transform: translateX(0); }
-  15%  { transform: translateX(-4px); }
-  30%  { transform: translateX(0); }
-  45%  { transform: translateX(4px); }
-  60%  { transform: translateX(0); }
+    0% {
+        transform: translateX(0);
+    }
 
-  100% { transform: translateX(0); }
+    15% {
+        transform: translateX(-4px);
+    }
+
+    30% {
+        transform: translateX(0);
+    }
+
+    45% {
+        transform: translateX(4px);
+    }
+
+    60% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .map__container {
