@@ -330,11 +330,19 @@
 
   <!-- Секция с картой -->
   <section class="map">
-    <button class="map__zoom-button">
-    <svg class="map__zoom-icon" width="25" height="25" viewBox="0 0 25 25" aria-hidden="true">
-      <use href="./icons/sprite.svg#icon-loupe"></use>
-    </svg>
+    <button class="map__zoom-button" data-popup-open="map-popup">
+      <svg class="map__zoom-icon" width="25" height="25" viewBox="0 0 25 25" aria-hidden="true">
+        <use href="./icons/sprite.svg#icon-loupe"></use>
+      </svg>
     </button>
+    <div class="map__scroll">
+      <img class="map__img" src="./images/map-tablet.png" alt="">
+    </div>
+    <div class="map__hand-icon-wrapper">
+      <svg class="map__hand-icon" width="19" height="26" viewBox="0 0 19 26" aria-hidden="true">
+        <use href="./icons/sprite.svg#icon-hand-scroll"></use>
+      </svg>
+    </div>
     <div class="container map__container">
       <div class="map__inner">
         <h2 class="map__title">
@@ -342,73 +350,77 @@
           отдыха и объекты бытовой инфраструктуры
         </h2>
         <div class="map__info">
-          <div class="map__walking">
-            <div class="map__walking-icons-wrapper">
+          <div class="map__walking map__info-section">
+            <div class="map__walking-icons-wrapper map__info-section-icons-wrapper">
               <svg class="map__walking-icon" width="27" height="47" viewBox="0 0 27 47" aria-hidden="true">
                 <use href="./icons/sprite.svg#icon-walking"></use>
               </svg>
-              <svg class="map__walking-icon" width="292" height="15" viewBox="0 0 292 15" aria-hidden="true">
-                <use href="./icons/sprite.svg#icon-arrow-line-long"></use>
-              </svg>
+              <div class="map__info-section-decor">
+                <svg class="map__info-section-decor-icon" width="9" height="15" viewBox="0 0 9 15" aria-hidden="true">
+                  <use href="./icons/sprite.svg#icon-arrow-small"></use>
+                </svg>
+              </div>
             </div>
-            <ul class="map__walking-list">
-              <li class="map__walking-list-item">
-                <span class="map__walking-list-item-name">
+            <ul class="map__walking-list map__info-section-list">
+              <li class="map__walking-list-item map__info-section-list-item">
+                <span class="map__walking-list-item-name map__info-section-list-item-name">
                   Гастроном
                 </span>
-                <span class="map__walking-list-item-time">
+                <span class="map__walking-list-item-time map__info-section-list-item-time">
                   3 мин
                 </span>
               </li>
-              <li class="map__walking-list-item">
-                <span class="map__walking-list-item-name">
+              <li class="map__walking-list-item map__info-section-list-item">
+                <span class="map__walking-list-item-name map__info-section-list-item-name">
                   Детская школа искусств
                 </span>
-                <span class="map__walking-list-item-time">
+                <span class="map__walking-list-item-time map__info-section-list-item-time">
                   6 мин
                 </span>
               </li>
-              <li class="map__walking-list-item">
-                <span class="map__walking-list-item-name">
+              <li class="map__walking-list-item map__info-section-list-item">
+                <span class="map__walking-list-item-name map__info-section-list-item-name">
                   Кондитерская
                 </span>
-                <span class="map__walking-list-item-time">
+                <span class="map__walking-list-item-time map__info-section-list-item-time">
                   8 мин
                 </span>
               </li>
             </ul>
           </div>
-          <div class="map__car">
-            <div class="map__car-icons-wrapper">
+          <div class="map__car map__info-section">
+            <div class="map__car-icons-wrapper map__info-section-icons-wrapper">
               <svg class="map__car-icon" width="65" height="26" viewBox="0 0 65 26" aria-hidden="true">
                 <use href="./icons/sprite.svg#icon-car"></use>
               </svg>
-              <svg class="map__car-icon" width="273" height="15" viewBox="0 0 273 15" aria-hidden="true">
-                <use href="./icons/sprite.svg#icon-arrow-line-short"></use>
-              </svg>
+              <div class="map__info-section-decor">
+                <svg class="map__info-section-decor-icon" width="9" height="15" viewBox="0 0 9 15" aria-hidden="true">
+                  <use href="./icons/sprite.svg#icon-arrow-small"></use>
+                </svg>
+              </div>
             </div>
-            <ul class="map__car-list">
-              <li class="map__car-list-item">
-                <span class="map__car-list-item-name">
+            <ul class="map__car-list map__info-section-list">
+              <li class="map__car-list-item map__info-section-list-item">
+                <span class="map__car-list-item-name map__info-section-list-item-name">
                   Массандровский дворец
                 </span>
-                <span class="map__car-list-item-time">
+                <span class="map__car-list-item-time map__info-section-list-item-time">
                   5 мин
                 </span>
               </li>
-              <li class="map__car-list-item">
-                <span class="map__car-list-item-name">
+              <li class="map__car-list-item map__info-section-list-item">
+                <span class="map__car-list-item-name map__info-section-list-item-name">
                   Игорная зона «Золотой берег»
                 </span>
-                <span class="map__car-list-item-time">
+                <span class="map__car-list-item-time map__info-section-list-item-time">
                   10 мин
                 </span>
               </li>
-              <li class="map__car-list-item">
-                <span class="map__car-list-item-name">
+              <li class="map__car-list-item map__info-section-list-item">
+                <span class="map__car-list-item-name map__info-section-list-item-name">
                   Конно-спортивный клуб
                 </span>
-                <span class="map__car-list-item-time">
+                <span class="map__car-list-item-time map__info-section-list-item-time">
                   22 мин
                 </span>
               </li>
@@ -472,9 +484,8 @@
     </div>
   </footer>
 
-  <div class="popup" id="location-popup" aria-hidden="true">
+  <div class="popup popup--small" id="location-popup" aria-hidden="true">
     <div class="popup__overlay"></div>
-
     <div class="popup__content">
       <div class="popup__top">
         <h3 class="popup__title">О Ялте</h3>
@@ -507,7 +518,26 @@
     </div>
   </div>
 
-  <div class="popup" id="park-popup" aria-hidden="true">
+  <div class="popup" id="map-popup" aria-hidden="true">
+    <div class="popup__overlay"></div>
+    <div class="popup__content">
+      <button class="popup__close popup__close--cross" data-popup-close>
+        <svg class="popup__close-icon" aria-hidden="true" width="15" height="15">
+          <use href="./icons/sprite.svg#icon-cross"></use>
+        </svg>
+      </button>
+      <button class="popup__close popup__close--loupe" data-popup-close>
+        <svg class="popup__close-icon" aria-hidden="true" width="19" height="19">
+          <use href="./icons/sprite.svg#icon-zoom-out"></use>
+        </svg>
+      </button>
+      <img class="popup__img popup__img--desktop" src="./images/map-zoom-d.png" alt="">
+      <img class="popup__img popup__img--tablet" src="./images/map-zoom-tablet.png" alt="">
+      <img class="popup__img popup__img--mobile" src="./images/map-zoom-mobile.png" alt="">
+    </div>
+  </div>
+
+  <div class="popup popup--small" id="park-popup" aria-hidden="true">
     <div class="popup__overlay"></div>
 
     <div class="popup__content">

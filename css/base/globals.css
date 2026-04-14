@@ -3,7 +3,7 @@
   font-weight: 300;
   color: var(--dark-brown);
   scroll-behavior: smooth;
-  background: var(--backgroun-color);
+  background: var(--background-color);
 }
 
 .page__body {
@@ -49,6 +49,26 @@ color: var(--dark-brown);
 
 .button:hover {
 color: var(--brown-darken);
+}
+
+button:active,
+.button:active,
+a:active {
+  transform: scale(0.97);
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brown-darken);
+  outline-offset: 3px;
+  border-radius: 6px;
 }
 
 @media (width <=1200px) {
