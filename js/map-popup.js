@@ -12,9 +12,6 @@ export function initMapPopup() {
 
   let hasScrolled = false;
 
-  // =========================
-  // 👉 СТАВИМ КАРТУ СПРАВА
-  // =========================
   function setStartPosition() {
     if (!mapScroll) return;
 
@@ -22,9 +19,6 @@ export function initMapPopup() {
       mapScroll.scrollWidth - mapScroll.clientWidth;
   }
 
-  // =========================
-  // 👉 ЖДЁМ ЗАГРУЗКУ КАРТИНКИ
-  // =========================
   function initScrollPosition() {
     if (!mapImg) {
       setStartPosition();
@@ -40,17 +34,12 @@ export function initMapPopup() {
     }
   }
 
-  // 🔥 ВАЖНО: вызываем сразу при инициализации
   initScrollPosition();
 
-  // =========================
-  // ОТКРЫТИЕ ПОПАПА
-  // =========================
   function openPopup() {
     popup.classList.add('active');
     document.body.style.overflow = 'hidden';
 
-    // ещё раз ставим вправо (на всякий случай)
     setTimeout(setStartPosition, 0);
   }
 
@@ -61,9 +50,6 @@ export function initMapPopup() {
 
   zoomArea?.addEventListener('click', openPopup);
 
-  // =========================
-  // ЗАКРЫТИЕ
-  // =========================
   function closePopup() {
     popup.classList.remove('active');
     document.body.style.overflow = '';
@@ -83,9 +69,6 @@ export function initMapPopup() {
     if (e.key === 'Escape') closePopup();
   });
 
-  // =========================
-  // СКРОЛЛ → УБИРАЕМ РУКУ
-  // =========================
   mapScroll?.addEventListener('scroll', () => {
     if (!hasScrolled) {
       hasScrolled = true;
@@ -93,9 +76,6 @@ export function initMapPopup() {
     }
   }, { passive: true });
 
-  // =========================
-  // ПЛАВНЫЙ СКРОЛЛ ВПРАВО
-  // =========================
   function smoothScrollToRight(element, duration = 1200) {
     if (!element) return;
 
