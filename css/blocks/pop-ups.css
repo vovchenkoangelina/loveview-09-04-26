@@ -56,7 +56,6 @@
   opacity: 0;
   display: flex;
   justify-content: center;
-  overflow: hidden;
 }
 
 @media (width <= 1080px) {
@@ -80,8 +79,8 @@
 
 #map-popup .popup__close {
   position: absolute;
-  top: -2px;
-  right: -92px;
+  top: 0px;
+  right: -90px;
   width: 80px;
   height: 80px;
   border-radius: 100%;
