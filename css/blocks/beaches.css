@@ -1,0 +1,234 @@
+.beaches {
+    position: relative;
+    padding-top: 64px;
+}
+.beaches__container {
+    position: relative;
+    padding: 186px 152px 158px;
+   display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 160px;
+}
+
+.beaches__bg {
+  position: absolute;
+  top: 32px;
+  left:36px;
+  inset: 0;
+  z-index: 0;
+   display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 160px;
+    overflow: hidden;
+}
+
+.beaches__bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  opacity: 0;
+  transition: opacity var(--transition-time) ease-out;
+}
+
+.beaches__bg-img.active {
+  opacity: 1;
+}
+
+.beaches__buttons-list {
+    position: absolute;
+    top: 32px;
+    left: 36px;
+    display: flex;
+    gap: 24px;
+}
+.beaches__buttons-list-item {
+
+}
+.beaches__button {
+        font-weight: 500;
+font-size: 20px;
+color: var(--white);
+border-radius: 34px;
+padding: 16px 27px;
+border: 1px solid rgba(255, 255, 255, 0.48);
+backdrop-filter: blur(4px);
+background: rgba(0, 0, 0, 0.08);
+}
+.beaches__button.active {
+border: 2px solid rgba(255, 255, 255, 0.8);
+background: rgba(0, 0, 0, 0.08);
+}
+.beaches__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.beaches__content {
+    max-width: 53%;
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+.beaches__title {
+    font-family: var(--second-family);
+font-weight: 300;
+font-size: 80px;
+line-height: 100%;
+text-transform: uppercase;
+color: var(--white);
+}
+.beaches__description {
+    font-weight: 300;
+font-size: 20px;
+    line-height: 150%;
+color: var(--white);
+backdrop-filter: blur(0px);
+}
+
+.beaches__remark {
+    font-family: var(--second-family);
+font-weight: 400;
+font-size: 36px;
+line-height: 124%;
+text-transform: uppercase;
+color: var(--white);
+backdrop-filter: blur(0px);
+}
+.beaches__note {
+    max-width: 485px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 8px;
+padding: 24px 28px;
+backdrop-filter: blur(13px);
+background: rgba(72, 73, 77, 0.67);
+}
+@media (width <=1200px) {
+    /* .beaches__note {
+        display: none;
+    } */
+
+    .beaches__note:hover {
+        background: rgba(71, 78, 73, 0.27);
+    }
+}
+
+@media (width <=1200px) {
+.beaches__note {
+    position: absolute;
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+        right: 0px;
+        bottom: -158px;
+        padding: 16px 16px 14px;
+        flex-direction: row;
+        gap: 0;
+        border-radius: 8px 8px 0px 0px;
+}
+}
+
+.beaches__note-title {
+
+}
+.beaches__note-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+ @media (width <=1200px) {
+.beaches__note-list {
+    display: none;
+}
+ }
+.beaches__note-list-item {
+    font-size: 20px;
+color: var(--white);
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.beaches__note-list-item::before {
+    content: "";
+    padding-top: 8px;
+    display: inline-flex;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: var(--white);
+}
+
+.beaches__slider-button {
+    position: absolute;
+    top: 50%;
+    width: 80px;
+height: 80px;
+    border-radius: 100%;
+background: hsla(0, 0%, 0%, 0.4);
+backdrop-filter: blur(1px);
+}
+.beaches__slider-button-icon {
+        color: #ffffffc5;
+        width: 32px;
+        height: 32px;
+}
+
+.beaches__slider-button--next {
+    right: 23px;
+}
+
+.beaches__slider-button--prev {
+    left: 23px;
+    transform: scaleX(-1);
+}
+
+.beaches__slide {
+  height: 100%;
+}
+
+.beaches__slider-title {
+margin-bottom: 16px;
+    font-family: var(--second-family);
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.beaches__slider-title span {
+    font-weight: 200;
+    line-height: 110%;
+    font-size: 200px;
+}
+
+.beaches__slider {
+    width: 100%;
+  flex: 1;
+  display: flex;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  display: flex;
+  height: auto;
+}
+
+.beaches__slide {
+  width: 100%;
+  display: flex;
+}
+
+.beaches__inner {
+  width: 100%;
+}

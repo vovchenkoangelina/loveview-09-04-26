@@ -18,7 +18,6 @@ export function initSmallPopups() {
     openPopup(popup);
   });
 
-  // CLOSE by button
   document.addEventListener('click', (e) => {
     const btn = e.target.closest('[data-popup-close]');
     if (!btn) return;
