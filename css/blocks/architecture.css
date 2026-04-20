@@ -1,0 +1,105 @@
+.architecture {
+        background: var(--white);
+}
+.architecture__container {
+    padding: 46px 0px 160px;
+}
+.architecture__container.container {
+    padding-left: 0px !important;
+}
+.architecture__inner {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 83px;
+}
+.architecture__img-wrapper {
+    height: 100%;
+    width: fit-content;
+}
+.architecture__img {
+    max-height: 1304px;
+    max-width: 888px;
+}
+.architecture__content {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+}
+.architecture__titles-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 66px;
+}
+.architecture__title {
+    font-size: 22px;
+letter-spacing: 0.02em;
+text-transform: uppercase;
+font-weight: 300;
+}
+.architecture__subtitle {
+    font-family: var(--second-family);
+font-weight: 300;
+font-size: 48px;
+line-height: 124%;
+text-transform: uppercase;
+color: var(--for-light-text);
+text-wrap: balance;
+}
+.architecture__subtitle span {
+    color: var(--brown);
+}
+.architecture__list-wrapper {
+    display: flex;
+    gap: 39px;
+    justify-content: flex-end;
+}
+.architecture__list-text-wrapper {
+    width: 45%;
+    font-size: 20px;
+    line-height: 140%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.architecture__list-description {
+}
+.architecture__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.architecture__list-item {
+    display: flex;
+    gap: 8px;
+}
+.architecture__list-item::before {
+    content: "";
+    display: inline-block;
+    margin: 8px 8px 8px 0px;
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+    border-radius: 100%;
+    background-color: var(--dark-brown);
+}
+.architecture__list-img-wrapper {
+    position: relative;
+border-radius: 800px 800px 0 0;
+overflow: hidden;
+}
+
+.architecture__list-img {
+}
+
+.architecture__list-img-wrapper::after {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    display: block;
+    width: 432px;
+    height: 165px;
+    background: url(../../decor/wave-short.svg) no-repeat center / cover;
+}
