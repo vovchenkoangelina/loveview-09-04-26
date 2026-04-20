@@ -1,26 +1,38 @@
 .architecture {
+    padding-top: 96px;
+    height: 100%;
         background: var(--white);
 }
 .architecture__container {
-    padding: 46px 0px 160px;
+    padding: 46px 0px 0px;
+        border: 1px solid green;
+        height: 1510px;
 }
 .architecture__container.container {
     padding-left: 0px !important;
 }
 .architecture__inner {
+    height: 100%;
     position: relative;
     display: flex;
     align-items: flex-start;
     gap: 83px;
+        border: 1px solid blue;
 }
 .architecture__img-wrapper {
+    position: relative;
     height: 100%;
     width: fit-content;
+    border: 1px solid red;
 }
 .architecture__img {
+    position: sticky;
+    top: 0;
     max-height: 1304px;
     max-width: 888px;
 }
+
+
 .architecture__content {
     position: sticky;
     top: 0;
