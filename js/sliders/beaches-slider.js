@@ -4,7 +4,7 @@ export function initBeachesSlider() {
 
   const slider = new Swiper(sliderEl, {
     slidesPerView: 1,
-    speed: 800,
+    speed: 1200,
     allowTouchMove: true,
     navigation: {
       nextEl: '.beaches__slider-button--next',

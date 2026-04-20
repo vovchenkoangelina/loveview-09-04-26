@@ -33,5 +33,7 @@ export function initRoofSlider() {
 
   setActive(0);
 
+  
+
   return swiper;
 }

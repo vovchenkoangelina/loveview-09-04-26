@@ -7,6 +7,7 @@ import { initMapSlider } from './sliders/map-slider.js';
 import { initBeachesSlider } from './sliders/beaches-slider.js';
 
 import { initRoofSlider } from './sliders/roof-slider.js';
+import { initInfrastructureAccordion } from './infrastructure.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initHeaderMenu();
@@ -18,4 +19,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initBeachesSlider();
 
   initRoofSlider();
+  initInfrastructureAccordion();
 });
