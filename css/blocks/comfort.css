@@ -1,0 +1,140 @@
+.comfort {
+    background: url(../../decor/noise-bg.png) repeat;
+}
+
+.comfort__container {
+    padding-block: 120px 79px;
+}
+
+.comfort__inner {
+    padding-right: 109px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.comfort__title {
+    color: var(--white);
+    margin-bottom: 40px;
+}
+
+.comfort__subtitle {
+    color: var(--light-brown-2);
+    max-width: 60%;
+    text-wrap: balance;
+}
+
+.comfort__list {
+    display: flex;
+    gap: 135px;
+}
+
+.comfort__list-item {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1;
+}
+
+.comfort__list-item-icon-wrapper {
+    width: 80px;
+    height: 80px;
+}
+
+.comfort__list-item-title {
+    width: 60%;
+    font-family: var(--second-family);
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 124%;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: var(--light-brown-2);
+}
+
+.comfort__list-item-description {
+    font-size: 20px;
+    color: var(--middle-brown);
+}
+
+.comfort__parking {
+    display: flex;
+    gap: 106px;
+    justify-content: space-between;
+}
+
+.comfort__parking-video-wrapper {
+    flex: 1;
+    position: relative;
+    padding: 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.comfort__parking-info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    z-index: 1;
+}
+
+.comfort__parking-info:first-of-type {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: flex-start;
+    margin-bottom: auto;
+}
+
+.comfort__parking-info-number {
+    font-family: var(--second-family);
+    font-weight: 300;
+    font-size: 80px;
+    line-height: 100%;
+    color: var(--brown);
+}
+
+.comfort__parking-info-text {
+    font-family: var(--third-family);
+    font-weight: 300;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--middle-brown);
+}
+
+.comfort__parking-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.comfort__parking-list {
+    max-width: 28%;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.comfort__parking-list-item {
+    max-width: 70%;
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 20px;
+    color: var(--middle-brown);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.comfort__parking-list-item-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.comfort__parking-list-item-text {}

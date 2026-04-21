@@ -2,7 +2,8 @@
     background: url(../../decor/noise-bg.png) repeat;
 }
 .apartments__container {
-    padding-block: 101px 79px;
+    padding-block: 101px 35px;
+        border-bottom: 1px solid var(--brown);
 }
 .apartments__inner {
     display: flex;
@@ -117,8 +118,7 @@ background: var(--white);
 
 
 .apartments__slider {
-    padding-bottom: 35px;
-    border-bottom: 1px solid var(--brown);
+
 }
 .apartments__slide {}
 .apartments__slide-bg {}
@@ -127,7 +127,9 @@ background: var(--white);
 }
 .apartments__slide-title {}
 .apartments__slide-content-bottom {}
-.apartments__slide-description {}
+.apartments__slide-description {
+    max-width: 62%;
+}
 .apartments__slide-number {}
 .apartments__slider-pagination {
     z-index: 2;
@@ -139,22 +141,3 @@ background: var(--white);
 .apartments__slider-button-icon {}
 .apartments__slider-nav-button--next {}
 
-.apartments__background-holder {
-    width: 100%;
-position: absolute;
-left: 0;
-opacity: 48%;
-z-index: 1;
-}
-
-.apartments__background-holder--top {
-height: 199px;
-top: 0;
-background: linear-gradient(180deg, rgba(0, 0, 0, 100%) 0%, rgba(0, 0, 0, 0%) 100%);
-}
-
-.apartments__background-holder--bottom {
-height: 346px;
-bottom: 0;
-background: linear-gradient(180deg, rgba(0, 0, 0, 0%) 0%, rgba(0, 0, 0, 100%) 100%);
-}
