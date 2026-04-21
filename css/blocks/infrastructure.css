@@ -14,6 +14,38 @@
     gap: 167px;
 }
 
+.infrastructure__media {
+  position: relative;
+  height: max-content;
+  border-radius: 800px 800px 0 0;
+  overflow: hidden;
+}
+
+.infrastructure__media::after {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 25%;
+    background: url(../../decor/wave-short-white.svg) no-repeat center / cover;
+}
+
+.infrastructure__image {
+  display: none;
+}
+
+.infrastructure__image.is-active {
+  display: block;
+}
+
+.infrastructure__accordion {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
 .infrastructure__title {
 font-family: var(--second-family);
 font-weight: 300;
@@ -23,21 +55,33 @@ letter-spacing: 0.01em;
 text-transform: uppercase;
 }
 
+.infrastructure__item {
+  padding-block: 30px;
+  border-bottom: 1px solid var(--dark-brown);
+}
+
 .infrastructure__summary {
+  font-size: 22px;
+letter-spacing: 0.02em;
+text-transform: uppercase;
+color: var(--brown-darken);
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  list-style: none;
 }
 
-.infrastructure__summary::-webkit-details-marker {
-  display: none;
-}
+.infrastructure__content {
+  margin-top: 22px;
+  padding-right: 40px;
+  font-family: var(--third-family);
+font-weight: 400;
+font-size: 20px;
+} 
 
 .infrastructure__icon {
-  width: 24px;
-  height: 24px;
+  width: 34px;
+  height: 40px;
   position: relative;
   flex-shrink: 0;
 }
@@ -46,34 +90,27 @@ text-transform: uppercase;
 .infrastructure__icon::after {
   content: "";
   position: absolute;
-  background: #fff;
-  border-radius: 2px;
+  background: var(--dark-brown);
+  border-radius: 1px;
 }
 
 .infrastructure__icon::before {
-  width: 14px;
-  height: 2px;
+  width: 16px;
+  height: 1px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .infrastructure__icon::after {
-  width: 2px;
-  height: 14px;
+  width: 1px;
+  height: 16px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: transform var(--transition-time) ease-out;
 }
 
 .infrastructure__item[open] .infrastructure__icon::after {
-  opacity: 0;
-}
-
-.infrastructure__image.is-active {
-  display: block;
-}
-
-.infrastructure__image {
-  display: none;
+  transform: translate(-50%, -50%) rotate(90deg);
 }

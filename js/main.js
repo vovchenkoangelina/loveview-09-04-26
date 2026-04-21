@@ -4,9 +4,10 @@ import { initHeroScroll } from './hero.js';
 import { initSmallPopups } from './small-popups.js';
 import { initMapPopup } from './map-popup.js';
 import { initMapSlider } from './sliders/map-slider.js';
-import { initBeachesSlider } from './sliders/beaches-slider.js';
+import { initLaviewSliders } from './sliders/laview-slider.js';
+// import { initBeachesSlider } from './sliders/beaches-slider.js';
 
-import { initRoofSlider } from './sliders/roof-slider.js';
+// import { initRoofSlider } from './sliders/roof-slider.js';
 import { initInfrastructureAccordion } from './infrastructure.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,8 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmallPopups();
   initMapPopup(); 
   initMapSlider();
-  initBeachesSlider();
+  initLaviewSliders();
+  // initBeachesSlider();
 
-  initRoofSlider();
+  // initRoofSlider();
   initInfrastructureAccordion();
 });

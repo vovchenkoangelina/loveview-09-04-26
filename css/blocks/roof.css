@@ -46,7 +46,7 @@ color: var(--brand-brown);
 letter-spacing: 0.02em;
 text-transform: uppercase;
 }
-.roof__slider {
+/* .roof__slider {
     position: relative;
     width: 100%;
   overflow: hidden;
@@ -158,4 +158,4 @@ text-align: right;
 .roof__slider-nav-button--prev {
     left: 23px;
     transform: scaleX(-1);
-}
+} */

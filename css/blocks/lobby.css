@@ -1,0 +1,37 @@
+.lobby {
+    background: var(--white);
+}
+.lobby__container {
+    padding-block: 26px 80px;
+}
+.lobby__inner {
+
+}
+.lobby__title {
+    margin-bottom: 66px;
+    font-weight: 300;
+font-size: 22px;
+letter-spacing: 0.02em;
+text-transform: uppercase;
+}
+.lobby__subtitle {
+        max-width: 80%;
+    margin-bottom: 32px;
+    font-family: var(--second-family);
+font-weight: 300;
+font-size: 48px;
+line-height: 124%;
+text-transform: uppercase;
+}
+.lobby__description {
+    max-width: 40%;
+    font-size: 20px;
+}
+.lobby__img-wrapper {
+    margin-top: 80px;
+    display: flex;
+    gap: 24px;
+}
+.lobby__img {
+
+}

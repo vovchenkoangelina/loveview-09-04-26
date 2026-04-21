@@ -1,0 +1,136 @@
+.apartments {
+    background: url(../../decor/noise-bg.png) repeat;
+}
+.apartments__container {
+    padding-block: 101px 79px;
+}
+.apartments__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+}
+.apartments__titles-wrapper {}
+.apartments__title {
+    color: var(--white);
+}
+.apartments__subtitle {
+    max-width: 65%;
+    color: var(--light-brown-2);
+}
+.apartments__content-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.apartments__numbers-list {
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 58px;
+}
+.apartments__numbers-list-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.apartments__list-number {
+    font-family: var(--second-family);
+font-weight: 300;
+font-size: 80px;
+line-height: 100%;
+color: var(--middle-brown);
+}
+.apartments__list-number--accent {
+    font-size: 220px;
+    font-weight: 200;
+}
+.apartments__list-description {
+    font-size: 22px;
+letter-spacing: 0.02em;
+text-transform: uppercase;
+color: var(--white);
+}
+.apartments__info {
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.apartments__info-text-wrapper {
+    margin-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.apartments__description {
+    font-size: 20px;
+color: var(--middle-brown);
+}
+.apartments__furnish {
+    max-width: fit-content;
+    margin-bottom: 49px;
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+.apartments__furnish-title {
+    padding-bottom: 15px;
+    font-family: var(--third-family);
+font-weight: 400;
+font-size: 18px;
+text-transform: uppercase;
+color: var(--light-brown-2);
+border-bottom: 1px solid var(--middle-brown);
+}
+.apartments__furnish-list {
+    display: flex;
+    gap: 24px;
+}
+.apartments__furnish-list-item {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    border-radius: 100px 100px 0 0;
+    overflow: hidden;
+}
+.apartments__furnish-list-img {
+
+}
+.apartments__furnish-list-text {
+    font-family: var(--third-family);
+font-weight: 400;
+font-size: 18px;
+text-transform: uppercase;
+color: var(--light-brown-2);
+}
+
+.apartments__button {
+font-weight: 400;
+font-size: 18px;
+text-transform: uppercase;
+color: var(--dark-brown);
+border-radius: 80px;
+padding: 29px 84px 26px;
+background: var(--white);
+}
+
+
+
+
+.apartments__slider {
+    padding-bottom: 35px;
+    border-bottom: 1px solid var(--brown);
+}
+.apartments__slide {}
+.apartments__slide-bg {}
+.apartments__slide-content {}
+.apartments__slide-title {}
+.apartments__slide-content-bottom {}
+.apartments__slide-description {}
+.apartments__slide-number {}
+.apartments__slider-pagination {}
+.apartments__slider-pagination-button {}
+.apartments__slider-nav {}
+.apartments__slider-nav-button {}
+.apartments__slider-nav-button--prev {}
+.apartments__slider-button-icon {}
+.apartments__slider-nav-button--next {}

@@ -15,5 +15,7 @@
 @import './blocks/architecture.css';
 @import './blocks/roof.css';
 @import './blocks/infrastructure.css';
+@import './blocks/lobby.css';
+@import './blocks/apartments.css';
 
 @import './blocks/pop-ups.css';
