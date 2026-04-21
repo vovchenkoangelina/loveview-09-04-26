@@ -249,11 +249,6 @@ color: var(--white);
     }
 }
 
-.beaches__button.active {
-    border: 2px solid rgba(255, 255, 255, 0.8);
-    background: rgba(0, 0, 0, 0.08);
-}
-
 @media (width <= 768px) {
     .beaches__button.active {
         color: var(--white);

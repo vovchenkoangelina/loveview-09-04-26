@@ -122,15 +122,39 @@ background: var(--white);
 }
 .apartments__slide {}
 .apartments__slide-bg {}
-.apartments__slide-content {}
+.apartments__slide-content {
+    z-index: 2;
+}
 .apartments__slide-title {}
 .apartments__slide-content-bottom {}
 .apartments__slide-description {}
 .apartments__slide-number {}
-.apartments__slider-pagination {}
+.apartments__slider-pagination {
+    z-index: 2;
+}
 .apartments__slider-pagination-button {}
 .apartments__slider-nav {}
 .apartments__slider-nav-button {}
 .apartments__slider-nav-button--prev {}
 .apartments__slider-button-icon {}
 .apartments__slider-nav-button--next {}
+
+.apartments__background-holder {
+    width: 100%;
+position: absolute;
+left: 0;
+opacity: 48%;
+z-index: 1;
+}
+
+.apartments__background-holder--top {
+height: 199px;
+top: 0;
+background: linear-gradient(180deg, rgba(0, 0, 0, 100%) 0%, rgba(0, 0, 0, 0%) 100%);
+}
+
+.apartments__background-holder--bottom {
+height: 346px;
+bottom: 0;
+background: linear-gradient(180deg, rgba(0, 0, 0, 0%) 0%, rgba(0, 0, 0, 100%) 100%);
+}
