@@ -33,7 +33,7 @@ img {
 
 a {
     color: var(--dark-brown);
-    transition: color var(--transition-time);
+    transition: color var(--transition-time) ease-out;
 }
 
 a:hover {
@@ -346,4 +346,26 @@ background: linear-gradient(180deg, rgba(0, 0, 0, 0%) 0%, rgba(0, 0, 0, 100%) 10
   top: 0;
   left: 0;
   z-index: 0;
+}
+
+.loview-list {
+display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.loview-list-item {
+  display: flex;
+  gap: 8px;
+}
+
+.loview-list-item:before {
+  content: "";
+  display: inline-block;
+  margin: 8px 8px 8px 0px;
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 100%;
+  background-color: currentColor;
 }

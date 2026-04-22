@@ -1,0 +1,36 @@
+.formats {
+    background: var(--white);
+    padding-bottom: 143px;
+}
+.formats__container{
+    background: url(../../images/bottom-banner.png) no-repeat center / cover;
+}
+.formats__inner {
+    max-width: 60%;
+    padding: 150px;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.formats__title {
+    margin-bottom: 16px;
+    font-family: var(--second-family);
+font-weight: 300;
+font-size: 64px;
+line-height: 100%;
+text-transform: uppercase;
+color: var(--white);
+}
+.formats__text {
+font-size: 20px;
+line-height: 26px;
+}
+.formats__list {
+    margin-bottom: 8px;
+}
+
+.formats__list-item {
+    font-size: 20px;
+    line-height: 26px;
+}
