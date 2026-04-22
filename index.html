@@ -1624,11 +1624,12 @@
           </h2>
           <div class="about__top-wrapper">
             <a class="about__logo-link" href="https://alfa-development.ru/">
-              <img class="about__logo-img" src="./images/alf-logo.svg" width="271" height="97" alt="Логотип альфа Dевелопмент">
+              <img class="about__logo-img" src="./images/alf-logo.svg" width="271" height="97"
+                alt="Логотип альфа Dевелопмент">
             </a>
             <h3 class="about__subtitle section__subtitle">
               Мы — <a href="https://alfa-development.ru/" class="about__subtitle-link text-accent">альфа Dевелопмент
-              <img class="about__subtitle-icon" src="./icons/link-icon.svg" alt="" width="45px" height="45px"></a>
+                <img class="about__subtitle-icon" src="./icons/link-icon.svg" alt="" width="45px" height="45px"></a>
               , родом из Сибири.
               Мы уверены, что счастье можно построить
             </h3>
@@ -1706,9 +1707,15 @@
     </div>
   </section>
 
-  <section>
-    <div class="container" style="height: 2000px;">
-
+  <section class="booklet">
+    <div class="booklet__container container">
+      <img class="booklet__img" src="./images/booklet-img.png" alt="">
+      <h2 class="booklet__title">
+        СКАЧАЙТЕ БУКЛЕТ, ЧТОБЫ УЗНАТЬ БОЛЬШЕ
+      </h2>
+      <button class="booklet__button button">
+        СКАЧАТЬ
+      </button>
     </div>
   </section>
 
@@ -1716,7 +1723,100 @@
 
   <footer class="footer">
     <div class="container footer__container">
+      <div class="footer__top">
+        <nav class="footer__nav">
+          <ul class="footer__menu">
+            <li class="footer__menu-link">
+              Планировки
+            </li>
+            <li class="footer__menu-link">
+              Ход строительства
+            </li>
+            <li class="footer__menu-link">
+              Расположение
+            </li>
+            <li class="footer__menu-link">
+              Скачать буклет
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__logo-wrapper">
+          <a class="footer__logo-link" href="/">
+            <img class="footer__logo" src="./images/logo-footer.svg" width="190" height="125" alt="Логотип Лавью">
+          </a>
+          <a href="tel:+78002220610" class="footer__tel-link">
+            8 800 222-06-10
+          </a>
+          <button class="footer__button button">
+            ОБРАТНЫЙ ЗВОНОК
+          </button>
+        </div>
+        <div class="footer__contacts">
+          <span class="footer__contacts-title">
+            Офис продаж
+            альфа Dевелопмент
+          </span>
+          <p class="footer__contacts-info">
+            664022, Иркутск
+            ул. Семёна Лагоды, 4/6, офис 106
+            Пн-пт 9:00-19:00
+            Сб 10:00-14:00
+          </p>
+          <a href="https://yandex.ru/maps/63/irkutsk/house/ulitsa_semena_lagody_4_6/ZUkCaARgSEIHVEJvYWJzd3xqYg8=/?ll=104.301707%2C52.260967&z=16.66"
+            class="footer__contacts-link">Построить маршрут</a>
+          <a href="https://alfa-development.ru/" class="footer__contacts-link">ALFA-DEVELOMPEMT.RU</a>
+          <ul class="footer__contacts-socials">
+            <li>
+              <a class="footer__contacts-social-link" href="#" aria-label="VK">
+                <svg class="footer__contacts-social-icon" aria-hidden="true">
+                  <use href="./icons/sprite.svg#icon-vk"></use>
+                </svg>
+              </a>
+            </li>
 
+            <li>
+              <a class="footer__contacts-social-link" href="#" aria-label="Telegram">
+                <svg class="footer__contacts-social-icon" aria-hidden="true">
+                  <use href="./icons/sprite.svg#icon-tg"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a class="footer__contacts-social-link" href="#" aria-label="MAX">
+                <svg class="footer__contacts-social-icon" aria-hidden="true">
+                  <use href="./icons/sprite.svg#icon-max"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__middle">
+        <p class="footer__middle-text">
+          Изображения на фотографиях, рендерах и рисунках, представленные планировки могут отличаться от реального объекта. Вся размещенная информация на данном сайте носит исключительно ознакомительный характер и ни при каких условиях не является публичной офертой, не содержит полного и точного описания характеристик объекта и может быть изменена. Застройщик ООО «». 
+        </p>
+        <button class="footer__middle-button">
+          <svg class="footer__middle-button-icon" aria-hidden="true" width="24" height="24">
+            <use href="./icons/sprite.svg#icon-arrow"></use>
+          </svg>
+          <span>Наверх</span>
+        </button>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__bottom-text">
+          © 2024 ООО «Специализированный застройщик СКИМ»
+        </p>
+        <a href="#" class="footer__bottom-link">
+          Проектная декларация на сайте наш.дом.рф
+        </a>
+        <a href="#" class="footer__bottom-link">
+          Политика конфиденциальности
+        </a>
+        <p class="footer__bottom-cop">
+          САЙТ СДЕЛАН в СЕМЬ ПАП
+        </p>
+      </div>
     </div>
   </footer>
 

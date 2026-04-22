@@ -21,5 +21,6 @@
 @import './blocks/services.css';
 @import './blocks/formats.css';
 @import './blocks/about.css';
-
+@import './blocks/booklet.css';
+@import './blocks/footer.css';
 @import './blocks/pop-ups.css';

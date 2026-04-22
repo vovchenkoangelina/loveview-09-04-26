@@ -45,6 +45,7 @@ a:hover {
 border-radius: 80px;
 transition: color var(--transition-time);
 color: var(--dark-brown);
+text-transform: uppercase;
 }
 
 .button:hover {

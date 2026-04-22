@@ -1,0 +1,26 @@
+.booklet {
+    background: var(--middle-brown);
+}
+.booklet__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.booklet__img {
+    margin-top: -20px;
+}
+.booklet__title {
+    font-family: var(--second-family);
+font-weight: 300;
+font-size: 48px;
+line-height: 124%;
+text-transform: uppercase;
+color: var(--for-light-text);
+}
+.booklet__button {
+    font-weight: 400;
+font-size: 18px;
+border: none;
+padding: 29px 84px 26px;
+background: var(--white);
+}
