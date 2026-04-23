@@ -652,13 +652,11 @@
   <section class="video">
     <div class="container video__container">
       <div class="city-life__video-wrapper city-life__video-wrapper--tablet">
-        <img class="city-life__video-placeholder" src="./images/video-placeholder-tablet-img.png" alt="">
-        <button class="city-life__video-button city-life__video-button--tablet">
-          <svg class="city-life__video-icon city-life__video-button-icon--tablet" width="80" height="80"
-            viewBox="0 0 80 80" aria-hidden="true">
-            <use href="./icons/sprite.svg#icon-play"></use>
-          </svg>
-        </button>
+        <video class="apartments__slide-bg laview-slider__slide-bg loview-video"
+                src="./video/city-live-video.mov" poster="./images/video-placeholder-tablet-img.png" width="100%"
+                height="auto" preload="none" muted loop playsinline>
+                Ваш браузер не поддерживает видео.
+              </video>
       </div>
     </div>
   </section>
@@ -819,10 +817,10 @@
             <img class="architecture__img" src="./images/archi.png" alt="">
           </div>
           <div class="architecture__titles-wrapper architecture__titles-wrapper--mobile">
-            <h2 class="architecture__title">
+            <h2 class="architecture__title section__title">
               Архитектура
             </h2>
-            <p class="architecture__subtitle">
+            <p class="architecture__subtitle section__subtitle">
               Архитектура <span class="text-accent">«ЛАВЬЮ»</span> гармонично вписана в окружающее природное
               пространство.
               Это диалог между историей

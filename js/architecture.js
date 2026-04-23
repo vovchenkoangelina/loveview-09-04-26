@@ -5,8 +5,7 @@ export function initArchitectureParallax() {
 
   if (!section || !img || !content) return;
 
-  const isDesktop = () =>
-    window.matchMedia('(min-width: 769px)').matches;
+  const mq = window.matchMedia('(min-width: 1701px)');
 
   let ticking = false;
 
@@ -18,13 +17,15 @@ export function initArchitectureParallax() {
   }
 
   function update() {
+    if (!mq.matches) return;
+
     const rect = section.getBoundingClientRect();
     const vh = window.innerHeight;
 
     const progress = getProgress(rect, vh);
 
-    const imgMove = progress * 160;      
-    const contentMove = progress * 280;  
+    const imgMove = progress * 160;
+    const contentMove = progress * 280;
 
     img.style.transform = `translate3d(0, ${imgMove}px, 0)`;
     content.style.transform = `translate3d(0, ${contentMove}px, 0)`;
@@ -33,7 +34,7 @@ export function initArchitectureParallax() {
   }
 
   function onScroll() {
-    if (!isDesktop()) return;
+    if (!mq.matches) return;
 
     if (!ticking) {
       requestAnimationFrame(update);
@@ -41,8 +42,21 @@ export function initArchitectureParallax() {
     }
   }
 
+  function reset() {
+    img.style.transform = '';
+    content.style.transform = '';
+  }
+
   window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', update);
+  window.addEventListener('resize', () => {
+    if (!mq.matches) reset();
+    update();
+  });
+
+  mq.addEventListener?.('change', (e) => {
+    if (!e.matches) reset();
+    else update();
+  });
 
   update();
 }

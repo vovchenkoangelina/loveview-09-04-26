@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
 }
-@media (width <= 360px) {
+@media (width <= 480px) {
 .footer__container {
     padding-block: 64px 40px;
 }
@@ -18,7 +18,7 @@
     justify-content: space-between;
     color: var(--middle-brown);
 }
-@media (width <= 768px) {
+@media (width <= 1100px) {
     .footer__top {
     margin-bottom: 45px;
     flex-direction: column;
@@ -26,7 +26,7 @@
     gap: 24px;
 }
 }
-@media (width <= 360px) {
+@media (width <= 480px) {
     .footer__top {
     margin-bottom: 36px;
 }
@@ -44,7 +44,7 @@ font-size: 18px;
 text-transform: uppercase;
 color: var(--middle-brown);
 }
-@media (width <= 768px) {
+@media (width <= 1100px) {
     .footer__menu-link {
 font-size: 14px;
     }
@@ -60,12 +60,12 @@ font-size: 14px;
 
 .footer__logo {}
 
-@media (width <= 768px) {
+@media (width <= 1100px) {
 .footer__logo {
     width: 282px;
 }
 }
-@media (width <= 360px) {
+@media (width <= 480px) {
 .footer__logo {
     width: 190px;
 }
@@ -78,7 +78,7 @@ line-height: 100%;
 text-align: center;
 color: var(--brown);
 }
-@media (width <= 768px) {
+@media (width <= 1100px) {
     .footer__tel-link {
         font-size: 48px;
     }
@@ -91,7 +91,7 @@ text-transform: uppercase;
 background: var(--white);
 border: none;
 }
-@media (width <= 768px) {
+@media (width <= 1100px) {
 .footer__button {
     padding: 14px 64px;
     font-weight: 300;
@@ -109,7 +109,7 @@ font-size: 14px;
     align-items: flex-end;
     gap: 16px;
 }
-@media (width <= 768px) {
+@media (width <= 1100px) {
 .footer__contacts {
     margin-top: 16px;
     max-width: 100%;
@@ -122,7 +122,7 @@ text-transform: uppercase;
 font-weight: 400;
 font-size: 18px;
 }
-@media (width <= 768px) {
+@media (width <= 1100px) {
 .footer__contacts-title {
     font-size: 14px;
 }
@@ -134,7 +134,7 @@ font-size: 20px;
 line-height: 24px;
 color: var(--brown);
 }
-@media (width <= 768px) {
+@media (width <= 1100px) {
 .footer__contacts-info {
 font-size: 16px;
 }
@@ -148,7 +148,7 @@ font-size: 18px;
 text-transform: uppercase;
 color: var(--middle-brown);
 }
-@media (width <= 768px) {
+@media (width <= 1100px) {
 .footer__contacts-link {
 font-size: 14px;
 }
@@ -159,7 +159,7 @@ font-size: 14px;
     gap: 24px;
     color: var(--brown);
 }
-@media (width <= 768px) {
+@media (width <= 1100px) {
 .footer__contacts-socials {
     margin-top: 8px;
     gap: 8px;
@@ -174,13 +174,13 @@ font-size: 14px;
     width: 54px;
     height: 54px;
 }
-@media (width <= 360px) {
+@media (width <= 480px) {
 .footer__contacts-social-icon {
   width: 40px;
     height: 40px;
 }
 }
-@media (width <= 768px) {
+@media (width <= 1100px) {
 .footer__nav {
 order: 2;
 text-align: center;
@@ -208,14 +208,14 @@ font-weight: 400;
 font-size: 14px;
 color: rgba(187, 173, 161, 0.57);
 }
-@media (width <= 768px) {
+@media (width <= 1100px) {
 .footer__middle-text {
     font-weight: 300;
     max-width: 100%;
     font-size: 12px;
 }
 }
-@media (width <= 360px) {
+@media (width <= 480px) {
 .footer__middle-text {
     text-align: center;
 }
@@ -236,7 +236,7 @@ font-size: 16px;
 text-align: center;
 color: var(--brown);
 }
-@media (width <= 768px) {
+@media (width <= 1100px) {
 .footer__middle-button {
     padding-top: 13px;
     position: absolute;
@@ -250,7 +250,7 @@ color: var(--brown);
 .footer__middle-button-icon {
     transform: rotate(-45deg);
 }
-@media (width <= 768px) {
+@media (width <= 1100px) {
 .footer__middle-button-icon {
     width: 16px;
     height: 16px;
@@ -268,7 +268,7 @@ display: flex;
 justify-content: flex-start;
 gap: 88px;
 }
-@media (width <= 768px) {
+@media (width <= 1100px) {
 .footer__bottom {
     flex-direction: column;
     gap: 8px;
@@ -277,7 +277,7 @@ gap: 88px;
     font-weight: 300;
 }
 }
-@media (width <= 768px) {
+@media (width <= 1100px) {
     .footer__bottom-text {
     text-align: center;
 }
@@ -292,7 +292,7 @@ text-transform: uppercase;
 color: var(--middle-brown);
 }
 
-@media (width <= 360px) {
+@media (width <= 480px) {
 .footer__bottom-link {
 font-size: 12px;
 }
@@ -301,7 +301,7 @@ font-size: 12px;
 .footer__bottom-cop {
     margin-left: auto;
 }
-@media (width <= 768px) {
+@media (width <= 1100px) {
 .footer__bottom-cop {
     margin-inline: auto;
     margin-top: 24px;
