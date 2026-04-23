@@ -23,3 +23,11 @@ font-family: 'Inter';
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+font-family: 'Inter';
+  src: url('../../fonts/Inter-LightBETA.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

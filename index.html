@@ -13,7 +13,7 @@
   <title>Лавью</title>
 </head>
 
-<body class="page__body">
+<body class="page__body" id="top">
 
   <!-- Шапка -->
 
@@ -89,6 +89,7 @@
             </div>
 
             <div class="burger-menu__info">
+              <a class="header-menu__phone" href="tel:+78002220610">8 800 222-06-10</a>
               <p class="burger-menu__address">
                 664022, Иркутск<br>
                 ул. Семёна Лагоды, 4/6, офис 106<br>
@@ -283,6 +284,8 @@
       </div>
     </div>
   </section>
+
+  <!-- Расположение -->
 
   <section class="location">
     <div class="container location__container">
@@ -622,7 +625,7 @@
         </h2>
         <div class="city-life__content">
           <div class="city-life__video-wrapper">
-            <img class="city-life__video-placeholder" src="./images/video-placeholder-img.png" alt="">
+            <img class="city-life__preview" src="./images/video-placeholder-img.png" alt="Видео о жизни в городе">
             <button class="city-life__video-button">
               <svg class="city-life__video-icon" width="80" height="80" viewBox="0 0 80 80" aria-hidden="true">
                 <use href="./icons/sprite.svg#icon-play"></use>
@@ -698,13 +701,12 @@
     <div class="container beaches__container">
 
       <div class="beaches__slider laview-slider swiper">
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper laview-slider__wrapper">
 
           <div class="swiper-slide beaches__slide beaches__slide--1 laview-slider__slide">
             <img src="./images/beaches1.png" class="beaches__bg-img">
-            <div class="beaches__inner laview-slider__slide-content">
-
-              <div class="beaches__content">
+            <div class="beaches__inner">
+              <div class="beaches__content laview-slider__slide-content">
                 <h2 class="beaches__title laview-slider__slide-title">Вблизи лучших пляжей Ялты</h2>
                 <p class="beaches__description laview-slider__slide-description">
                   Рядом с «ЛАВЬЮ» расположены два современных пляжа Ялты – «Изумрудный» и «Ялта-Интурист». Пляжи
@@ -714,8 +716,8 @@
                 <p class="beaches__remark">Для резидентов предусмотрен трансфер</p>
               </div>
 
-              <div class="beaches__note note">
-                <h3 class="beaches__note-title note-title">Природная эстетика и высокий уровень инфраструктуры</h3>
+              <div class="beaches__note note" data-popup-open="beaches-popup">
+                <h3 class="beaches__note-title note-title">Природная эстетика<br>и высокий уровень инфраструктуры</h3>
                 <ul class="beaches__note-list">
                   <li class="beaches__note-list-item">теплый душ и удобные раздевалки</li>
                   <li class="beaches__note-list-item">камеры хранения</li>
@@ -737,28 +739,43 @@
           </div>
 
           <div class="swiper-slide beaches__slide beaches__slide--2 laview-slider__slide">
-            <img src="./images/beaches2.png" class="beaches__bg-img">
-            <h2 class="beaches__slider-title"><span>6</span><br>минут до пляжа<br>Изумрудный</h2>
+            <img src="./images/beaches2.png" class="laview-slider__slide-bg">
+            <h2 class="beaches__slider-title"><span>6</span><br>минут до пляжа Изумрудный</h2>
+            <span class="beaches__slide-text-mobile">
+              6 минут на автомобиле
+            </span>
           </div>
 
           <div class="swiper-slide beaches__slide beaches__slide--3 laview-slider__slide">
-            <img src="./images/beaches3.png" class="beaches__bg-img">
-            <h2 class="beaches__slider-title"><span>9</span><br>минут до пляжа<br>Ялта-Интурист</h2>
+            <img src="./images/beaches3.png" class="laview-slider__slide-bg">
+            <h2 class="beaches__slider-title"><span>9</span><br>минут до пляжа Ялта-Интурист</h2>
+            <span class="beaches__slide-text-mobile">
+              6 минут на автомобиле
+            </span>
           </div>
 
           <div class="swiper-slide beaches__slide beaches__slide--4 laview-slider__slide">
-            <img src="./images/beaches4.png" class="beaches__bg-img">
-            <h2 class="beaches__slider-title"><span>8</span><br>минут до пляжа<br>Скай</h2>
+            <img src="./images/beaches4.png" class="laview-slider__slide-bg">
+            <h2 class="beaches__slider-title"><span>8</span><br>минут до пляжа Скай</h2>
+            <span class="beaches__slide-text-mobile">
+              8 минут на автомобиле
+            </span>
           </div>
 
           <div class="swiper-slide beaches__slide beaches__slide--5 laview-slider__slide">
-            <img src="./images/beaches5.png" class="beaches__bg-img">
-            <h2 class="beaches__slider-title"><span>20</span><br>минут до пляжа<br>Массандра</h2>
+            <img src="./images/beaches5.png" class="laview-slider__slide-bg">
+            <h2 class="beaches__slider-title"><span>20</span><br>минут до пляжа Массандра</h2>
+            <span class="beaches__slide-text-mobile">
+              20 минут на автомобиле
+            </span>
           </div>
 
           <div class="swiper-slide beaches__slide beaches__slide--6 laview-slider__slide">
-            <img src="./images/beaches6.png" class="beaches__bg-img">
-            <h2 class="beaches__slider-title"><span>30</span><br>минут до пляжа<br>Приморский</h2>
+            <img src="./images/beaches6.png" class="laview-slider__slide-bg">
+            <h2 class="beaches__slider-title"><span>30</span><br>минут до пляжа Приморский</h2>
+            <span class="beaches__slide-text-mobile">
+              30 минут на автомобиле
+            </span>
           </div>
 
         </div>
@@ -797,11 +814,25 @@
   <section class="architecture">
     <div class="container architecture__container">
       <div class="architecture__inner">
-        <div class="architecture__img-wrapper">
-          <img class="architecture__img" src="./images/archi.png" alt="">
+        <div class="architecture__inner-top">
+          <div class="architecture__img-wrapper">
+            <img class="architecture__img" src="./images/archi.png" alt="">
+          </div>
+          <div class="architecture__titles-wrapper architecture__titles-wrapper--mobile">
+            <h2 class="architecture__title">
+              Архитектура
+            </h2>
+            <p class="architecture__subtitle">
+              Архитектура <span class="text-accent">«ЛАВЬЮ»</span> гармонично вписана в окружающее природное
+              пространство.
+              Это диалог между историей
+              и&nbsp;современностью, горами
+              и&nbsp;морем, человеком и природой
+            </p>
+          </div>
         </div>
         <div class="architecture__content">
-          <div class="architecture__titles-wrapper">
+          <div class="architecture__titles-wrapper architecture__titles-wrapper--desktop">
             <h2 class="architecture__title">
               Архитектура
             </h2>
@@ -830,8 +861,8 @@
                 </li>
               </ul>
             </div>
-            <div class="architecture__list-img-wrapper">
-              <img class="architecture__list-img" src="./images/archi2.png" alt="">
+            <div class="architecture__list-img-wrapper arch-picture-wrapper">
+              <img class="architecture__list-img arch-picture" src="./images/archi2.png" alt="">
             </div>
           </div>
         </div>
@@ -845,8 +876,8 @@
     <div class="container roof__container">
       <div class="roof__inner">
         <header class="roof__header">
-          <h2 class="roof__title">«ЛАВЬЮ»-инфраструктура</h2>
-          <p class="roof__description">
+          <h2 class="roof__title section__title">«ЛАВЬЮ»-инфраструктура</h2>
+          <p class="roof__description section__subtitle">
             Крыша <span>«ЛАВЬЮ»</span> — это ваш личный оазис под открытым небом, где сочетаются преимущества морского
             отдыха и
             повседневная жизнь
@@ -1090,6 +1121,7 @@
                 <p>Ваш день может начинаться в уютной кофейне и заканчиваться изысканным ужином в ресторане — все это
                   есть в «ЛАВЬЮ». Достаточно нескольких шагов, чтобы сменить обстановку и оказаться в пространстве для
                   гурманов</p>
+                <img class="infrastructure__image--mobile" src="./images/infrastructure/restaurant.png" alt="">
               </div>
             </details>
 
@@ -1102,6 +1134,7 @@
                 <p>Устраивайтесь с комфортом на смотровой площадке с лежаками и мягкими зонами. Ловите красоту
                   бескрайнего моря, зелени парка и магии рассветных или закатных часов. Эта зона отдыха создана именно
                   для того, чтобы вы наслаждались самыми лучшими видами</p>
+                <img class="infrastructure__image--mobile" src="./images/infrastructure/viewpoint.png" alt="">
               </div>
             </details>
 
@@ -1115,6 +1148,7 @@
                   радостью. В детском клубе ребенок может раскрывать свои таланты в атмосфере вдохновения, а на
                   современной безопасной площадке — активно играть и общаться со сверстниками среди горок и тоннелей на
                   свежем воздухе</p>
+                <img class="infrastructure__image--mobile" src="./images/infrastructure/children.png" alt="">
               </div>
             </details>
 
@@ -1127,6 +1161,7 @@
                 <p>Вы можете выбрать, где поддерживать здоровый образ жизни: на открытой площадке с панорамным видом,
                   где морской воздух и природа становятся частью вашей практики йоги, медитации или функциональной
                   тренировки, или в современном зале с тренажерами и зоной для групповых программ</p>
+                <img class="infrastructure__image--mobile" src="./images/infrastructure/sport.png" alt="">
               </div>
             </details>
 
@@ -1139,6 +1174,7 @@
                 <p>Войдите в мир тишины, расслабления и восстановления. Профессиональные процедуры: от массажа,
                   снимающего напряжение мышц, до ритуалов красоты, возвращающих свежесть и тонус. Забота о себе
                   становится естественной частью вашего дня</p>
+                <img class="infrastructure__image--mobile" src="./images/infrastructure/spa.png" alt="">
               </div>
             </details>
 
@@ -1151,6 +1187,7 @@
                 <p>Уютная и технологичная комната для мероприятий: от деловых переговоров и презентаций до семейных
                   праздников, мастер-классов или камерных концертов. Вы всегда сможете спонтанно собрать друзей или
                   коллег в «своем» пространстве, экономя время на поиске и аренде помещений в городе</p>
+                <img class="infrastructure__image--mobile" src="./images/infrastructure/events.png" alt="">
               </div>
             </details>
 
@@ -1163,6 +1200,7 @@
                 <p>Комната для досуга и развлечений — это пространство для приятного времяпрепровождения. Здесь можно
                   расслабиться, пообщаться с друзьями или просто насладиться моментом — выбирайте занятие под настроение
                 </p>
+                <img class="infrastructure__image--mobile" src="./images/infrastructure/leisure.png" alt="">
               </div>
             </details>
 
@@ -1176,6 +1214,7 @@
                   хочется задержаться: удобно устроиться в мягком кресле с книгой, неторопливо побеседовать за кофе или
                   просто наблюдать за жизнью в мягком свете. В зоне ресепшен вас всегда встретят лучистым вниманием и
                   искренней готовностью помочь</p>
+                <img class="infrastructure__image--mobile" src="./images/infrastructure/lobby.png" alt="">
               </div>
             </details>
 
@@ -1192,10 +1231,10 @@
   <section class="lobby">
     <div class="container lobby__container">
       <div class="lobby__inner">
-        <h2 class="lobby__title">
+        <h2 class="lobby__title section__title">
           Лобби
         </h2>
-        <h3 class="lobby__subtitle">
+        <h3 class="lobby__subtitle section__subtitle">
           ГРАНД-ЛОББИ <span class="text-accent">«ЛАВЬЮ»</span> — УЮТ И ЭСТЕТИКА в благородной палитре бежевых оттенков
         </h3>
         <p class="lobby__description">
@@ -1305,15 +1344,20 @@
           <div class="swiper-wrapper">
 
             <div class="swiper-slide apartments__slide laview-slider__slide">
-              <img class="apartments__slide-bg laview-slider__slide-bg" src="./images/apartments-slider-2.png" alt="" />
-
+              <video class="apartments__slide-bg laview-slider__slide-bg loview-video"
+                src="./video/apartments-video.mov" poster="./images/apartment-videopreview.png" width="100%"
+                height="auto" preload="none" muted loop playsinline>
+                Ваш браузер не поддерживает видео.
+              </video>
               <div class="apartments__slide-content laview-slider__slide-content">
                 <h4 class="apartments__slide-title laview-slider__slide-title">
                   ОТКРОЙТЕ ДЛЯ СЕБЯ УНИКАЛЬНЫЕ ЛОТЫ С ТЕРРАСАМИ
                 </h4>
                 <div class="apartments__slide-content-bottom laview-slider__slide-content-bottom">
                   <p class="apartments__slide-description laview-slider__slide-description">
-                    Ваш оазис на крыше для вдохновляющих встреч, романтических свиданий
+                    Терраса — продолжение вашего жилого пространства. Собственная смотровая площадка, где потрясающие
+                    виды становятся частью приватного мира. Утренний кофе с панорамой, вечера в кругу близких под
+                    звездами или тихие минуты созерцания — здесь рождается особый ритм жизни
                   </p>
                   <span class="apartments__slide-number laview-slider__slide-number">1/ 2</span>
                 </div>
@@ -1495,6 +1539,8 @@
     </div>
   </section>
 
+  <!-- Службы заботы -->
+
   <section class="services">
     <div class="services__container container">
       <div class="services__inner">
@@ -1508,7 +1554,7 @@
           <span class="services__number text-accent">
             24/ 7
           </span>
-          <div class="services__img-wrapper arch-picture-wrapper">
+          <div class="services__img-wrapper services__img-wrapper--desktop arch-picture-wrapper">
             <img class="services__img arch-picture" src="./images/services-img.png" alt="">
           </div>
         </header>
@@ -1536,54 +1582,64 @@
               Эталонный стандарт работы задан 15-летним опытом с такими лидерами
               отрасли, как «Брусники», ПИК и «Хаттон Девелопмент»
             </p>
-            <ul class="services__content-list">
-              <li class="services__content-list-item">
-                <div class="services__content-list-item-img-wrapper">
-                  <img class="services__content-list-item-img" src="./icons/services/services-icon1.svg" alt="">
-                </div>
-                <h5 class="services__content-list-item-title">
-                  СЛУЖБА ПРИЕМА
-                  И РАЗМЕЩЕНИЯ
-                </h5>
-                <p class="services__content-list-item-description">
-                  Бронирование, регистрация, консультации
+            <div class="services__content-bottom">
+              <div class="services__img-wrapper services__img-wrapper--mobile arch-picture-wrapper">
+                <img class="services__img arch-picture" src="./images/services-img.png" alt="">
+              </div>
+              <div class="services__content-bottom-text">
+                <ul class="services__content-list">
+                  <li class="services__content-list-item">
+                    <div class="services__content-list-item-img-wrapper">
+                      <img class="services__content-list-item-img" src="./icons/services/services-icon1.svg" alt="">
+                    </div>
+                    <h5 class="services__content-list-item-title">
+                      СЛУЖБА ПРИЕМА
+                      И РАЗМЕЩЕНИЯ
+                    </h5>
+                    <p class="services__content-list-item-description">
+                      Бронирование, регистрация, консультации
+                    </p>
+                  </li>
+                  <li class="services__content-list-item">
+                    <div class="services__content-list-item-img-wrapper">
+                      <img class="services__content-list-item-img" src="./icons/services/services-icon2.svg" alt="">
+                    </div>
+                    <h5 class="services__content-list-item-title">
+                      СЛУЖБА ПИТАНИЯ
+                    </h5>
+                    <p class="services__content-list-item-description">
+                      Рестораны, банкеты, обслуживание в номерах
+                    </p>
+                  </li>
+                  <li class="services__content-list-item">
+                    <div class="services__content-list-item-img-wrapper">
+                      <img class="services__content-list-item-img" src="./icons/services/services-icon3.svg" alt="">
+                    </div>
+                    <h5 class="services__content-list-item-title">
+                      СЛУЖБА ГОРНИЧНЫХ
+                    </h5>
+                    <p class="services__content-list-item-description">
+                      Уборка, замена белья, контроль состояния номеров
+                    </p>
+                  </li>
+                </ul>
+                <p class="services__content-text">
+                  Дополнительные услуги: трансфер, экскурсии, аренда авто, бизнес-услуги, уход за детьми и др.
                 </p>
-              </li>
-              <li class="services__content-list-item">
-                <div class="services__content-list-item-img-wrapper">
-                  <img class="services__content-list-item-img" src="./icons/services/services-icon2.svg" alt="">
-                </div>
-                <h5 class="services__content-list-item-title">
-                  СЛУЖБА ПИТАНИЯ
-                </h5>
-                <p class="services__content-list-item-description">
-                  Рестораны, банкеты, обслуживание в номерах
-                </p>
-              </li>
-              <li class="services__content-list-item">
-                <div class="services__content-list-item-img-wrapper">
-                  <img class="services__content-list-item-img" src="./icons/services/services-icon3.svg" alt="">
-                </div>
-                <h5 class="services__content-list-item-title">
-                  СЛУЖБА ГОРНИЧНЫХ
-                </h5>
-                <p class="services__content-list-item-description">
-                  Уборка, замена белья, контроль состояния номеров
-                </p>
-              </li>
-            </ul>
-            <p class="services__content-text">
-              Дополнительные услуги: трансфер, экскурсии, аренда авто, бизнес-услуги, уход за детьми и др.
-            </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Мультиформатность -->
+
   <section class="formats">
     <div class="formats__container container">
       <div class="formats__inner">
+        <img class="formats__img" src="./images/formats-img-mob.png" alt="">
         <h2 class="formats__title">
           МУЛЬТИФОРМАТНОСТЬ —
           ФОРМУЛА ПРИБЫЛЬНОСТИ
@@ -1615,6 +1671,8 @@
     </div>
   </section>
 
+
+  <!-- О нас -->
   <section class="about">
     <div class="about__container container">
       <div class="about__inner">
@@ -1675,6 +1733,9 @@
             </li>
           </ul>
           <div class="about__content">
+            <div class="about__content-img-wrapper">
+              <img class="about__content-img" src="./icons/q.svg" alt="">
+            </div>
             <p class="about__content-text">
               Наш 17-летний опыт дает нам возможность бескомпромиссно держать планку высокого качества во всем, что мы
               делаем сейчас. Мы создаем пространства, которые обеспечивают жителей безопасностью, уютом, красотой и
@@ -1707,6 +1768,8 @@
     </div>
   </section>
 
+  <!-- Баннер скачать буклет -->
+
   <section class="booklet">
     <div class="booklet__container container">
       <img class="booklet__img" src="./images/booklet-img.png" alt="">
@@ -1726,17 +1789,25 @@
       <div class="footer__top">
         <nav class="footer__nav">
           <ul class="footer__menu">
-            <li class="footer__menu-link">
-              Планировки
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">
+                Планировки
+              </a>
             </li>
-            <li class="footer__menu-link">
-              Ход строительства
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">
+                Ход строительства
+              </a>
             </li>
-            <li class="footer__menu-link">
-              Расположение
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">
+                Расположение
+              </a>
             </li>
-            <li class="footer__menu-link">
-              Скачать буклет
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">
+                Скачать буклет
+              </a>
             </li>
           </ul>
         </nav>
@@ -1753,18 +1824,26 @@
         </div>
         <div class="footer__contacts">
           <span class="footer__contacts-title">
-            Офис продаж
+            Офис продаж<br>
             альфа Dевелопмент
           </span>
           <p class="footer__contacts-info">
-            664022, Иркутск
-            ул. Семёна Лагоды, 4/6, офис 106
-            Пн-пт 9:00-19:00
+            664022, Иркутск<br>
+            ул. Семёна Лагоды, 4/6, офис 106<br>
+            Пн-пт 9:00-19:00<br>
             Сб 10:00-14:00
           </p>
           <a href="https://yandex.ru/maps/63/irkutsk/house/ulitsa_semena_lagody_4_6/ZUkCaARgSEIHVEJvYWJzd3xqYg8=/?ll=104.301707%2C52.260967&z=16.66"
-            class="footer__contacts-link">Построить маршрут</a>
-          <a href="https://alfa-development.ru/" class="footer__contacts-link">ALFA-DEVELOMPEMT.RU</a>
+            class="footer__contacts-link">Построить маршрут
+            <svg class="footer__contacts-icon" aria-hidden="true" width="24" height="24">
+              <use href="./icons/sprite.svg#icon-arrow"></use>
+            </svg>
+          </a>
+          <a href="https://alfa-development.ru/" class="footer__contacts-link">ALFA-DEVELOMPEMT.RU
+            <svg class="footer__contacts-icon" aria-hidden="true" width="24" height="24">
+              <use href="./icons/sprite.svg#icon-arrow"></use>
+            </svg>
+          </a>
           <ul class="footer__contacts-socials">
             <li>
               <a class="footer__contacts-social-link" href="#" aria-label="VK">
@@ -1794,14 +1873,17 @@
       </div>
       <div class="footer__middle">
         <p class="footer__middle-text">
-          Изображения на фотографиях, рендерах и рисунках, представленные планировки могут отличаться от реального объекта. Вся размещенная информация на данном сайте носит исключительно ознакомительный характер и ни при каких условиях не является публичной офертой, не содержит полного и точного описания характеристик объекта и может быть изменена. Застройщик ООО «». 
+          Изображения на фотографиях, рендерах и рисунках, представленные планировки могут отличаться от реального
+          объекта. Вся размещенная информация на данном сайте носит исключительно ознакомительный характер и ни при
+          каких условиях не является публичной офертой, не содержит полного и точного описания характеристик объекта и
+          может быть изменена. Застройщик ООО «».
         </p>
-        <button class="footer__middle-button">
+        <a class="footer__middle-button" href="#top">
           <svg class="footer__middle-button-icon" aria-hidden="true" width="24" height="24">
             <use href="./icons/sprite.svg#icon-arrow"></use>
           </svg>
           <span>Наверх</span>
-        </button>
+        </a>
       </div>
       <div class="footer__bottom">
         <p class="footer__bottom-text">
@@ -1895,7 +1977,6 @@
 
   <div class="popup popup--small" id="beaches-popup" aria-hidden="true">
     <div class="popup__overlay"></div>
-
     <div class="popup__content">
       <div class="popup__top">
         <h3 class="popup__title">Природная эстетика и высокий уровень инфраструктуры</h3>
@@ -1905,7 +1986,7 @@
           </svg>
         </button>
       </div>
-      <ul class="beaches__note-list">
+      <ul class="beaches__note-list beaches__note-list--modal">
         <li class="beaches__note-list-item">теплый душ и удобные раздевалки </li>
         <li class="beaches__note-list-item">камеры хранения </li>
         <li class="beaches__note-list-item">зонтики и шезлонги </li>
@@ -1917,6 +1998,90 @@
       </ul>
     </div>
   </div>
+
+
+  <div class="popup" id="layouts-popup" aria-hidden="true">
+    <div class="popup__overlay"></div>
+    <div class="popup__content layouts-popup">
+      <button class="popup__close popup__close--cross" data-popup-close>
+        <svg class="popup__close-icon" aria-hidden="true" width="15" height="15">
+          <use href="./icons/sprite.svg#icon-cross"></use>
+        </svg>
+      </button>
+      <h3 class="layouts-popup__title">
+        Планировки квартир
+      </h3>
+      <div class="layouts-popup__slider swiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide layouts-popup__slide">
+            <div class="layouts-popup__image swiper-zoom-container">
+              <img src="./images/apartplan.png" alt="">
+            </div>
+          </div>
+
+          <div class="swiper-slide layouts-popup__slide">
+            <div class="layouts-popup__image swiper-zoom-container">
+              <img src="./images/apartplan.png" alt="">
+            </div>
+          </div>
+
+          <div class="swiper-slide layouts-popup__slide">
+            <div class="layouts-popup__image swiper-zoom-container">
+              <img src="./images/apartplan.png" alt="">
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+      <div class="layouts-popup__bottom">
+        <div class="layouts-popup__stats">
+          <div class="layouts-popup__stat">
+            <div class="layouts-popup__value">124,39м²</div>
+            <div class="layouts-popup__label">площадь</div>
+          </div>
+          <div class="layouts-popup__stat">
+            <div class="layouts-popup__value">3,3м</div>
+            <div class="layouts-popup__label">высота потолков</div>
+          </div>
+          <div class="layouts-popup__nav">
+            <button class="layouts-popup__arrow layouts-popup__arrow--prev" type="button">
+              <img src="./icons/fancy-arrow.svg" alt="">
+            </button>
+            <div class="layouts-popup__fraction">
+              <span class="layouts-popup__current">1</span>/<span class="layouts-popup__total">3</span>
+            </div>
+            <button class="layouts-popup__arrow layouts-popup__arrow--next" type="button">
+              <img src="./icons/fancy-arrow.svg" alt="">
+            </button>
+          </div>
+          </div>
+        </div>
+      <form class="layouts-popup__form">
+        <div class="layouts-popup__inputs">
+          <input type="text" placeholder="Введите ваше имя">
+          <input type="tel" placeholder="Ваш телефон">
+        </div>
+        <button class="layouts-popup__submit button">
+          Запросить все планировки
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="popup" id="video-popup" aria-hidden="true">
+    <div class="popup__overlay"></div>
+    <div class="popup__content video-popup__content">
+      <button class="popup__close" data-video-close>
+        <svg class="popup__close-icon" width="15" height="15" aria-hidden="true">
+          <use href="./icons/sprite.svg#icon-cross"></use>
+        </svg>
+      </button>
+      <video class="video-popup__video" controls></video>
+    </div>
+  </div>
+
 
 </body>
 

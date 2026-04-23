@@ -8,10 +8,28 @@
     justify-content: center;
 }
 
+@media (width <= 768px) {
+  .infrastructure__container {
+    padding-top: 24px;
+  }
+}
+
+@media (width <= 360px) {
+  .infrastructure__container {
+    padding-bottom: 64px;
+  }
+}
+
 .infrastructure__inner {
     width: 80%;
     display: flex;
     gap: 167px;
+}
+
+@media (width <= 768px) {
+.infrastructure__inner {
+    width: 100%;
+}
 }
 
 .infrastructure__media {
@@ -47,12 +65,38 @@
   visibility: visible;
   opacity: 1;
 }
+.infrastructure__image--mobile {
+ display: none;
+}
+@media (width <= 768px) {
+  .infrastructure__media {
+    display: none;
+}
+.infrastructure__image--mobile {
+ display: block;
+ width: 50%;
+ max-height: 300px;
+}
+}
+@media (width <= 360px) {
+.infrastructure__image--mobile {
+ width: 100%;
+ max-height: 272px;
+}
+}
 
 .infrastructure__accordion {
   width: 50%;
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+
+@media (width <= 768px) {
+  .infrastructure__accordion {
+  width: 100%;
+  gap: 16px;
+  }
 }
 
 .infrastructure__title {
@@ -64,9 +108,27 @@ letter-spacing: 0.01em;
 text-transform: uppercase;
 }
 
+@media (width <= 768px) {
+  .infrastructure__title {
+font-size: 24px;
+  }
+}
+
 .infrastructure__item {
   padding-block: 30px;
   border-bottom: 1px solid var(--dark-brown);
+  transition: max-height var(--transition-time) ease-out;
+}
+
+.infrastructure__item[open] {
+max-height: 500px;
+}
+
+@media (width <= 768px) {
+  .infrastructure__item {
+  padding-block: 19px;
+
+  }
 }
 
 .infrastructure__summary {
@@ -81,6 +143,13 @@ color: var(--brand-brown);
   transition: color var(--transition-time) ease-out;
 }
 
+@media (width <= 768px) {
+  .infrastructure__summary {
+font-size: 14px;
+line-height: 100%;
+  }
+}
+
 .infrastructure__summary:hover {
 color: var(--brown-darken);
 }
@@ -91,13 +160,36 @@ color: var(--brown-darken);
   font-family: var(--third-family);
 font-weight: 400;
 font-size: 20px;
-} 
+}
+
+@media (width <= 768px) {
+  .infrastructure__content {
+  font-size: 16px;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  }
+}
+
+@media (width <= 360px) {
+  .infrastructure__content {
+padding-right: 0px;
+  }
+}
 
 .infrastructure__icon {
   width: 34px;
   height: 40px;
   position: relative;
   flex-shrink: 0;
+}
+
+@media (width <= 768px) {
+  .infrastructure__icon {
+  width: 28px;
+  height: 32px;
+  }
 }
 
 .infrastructure__icon::before,
@@ -128,3 +220,6 @@ font-size: 20px;
 .infrastructure__item[open] .infrastructure__icon::after {
   transform: translate(-50%, -50%) rotate(90deg);
 }
+
+
+

@@ -2,7 +2,13 @@
     background: var(--white);
     overflow: hidden;
     position: relative;
-    padding-top: 64px;
+    padding-block: 64px 96px;
+}
+
+@media (width <= 768px) {
+    .beaches {
+    padding-block: 40px 60px;
+    }
 }
 
 .beaches__container {
@@ -21,11 +27,17 @@
 
 .beaches__bg-img {
     position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+@media (width <= 768px) {
+    .beaches__bg-img {
+        position: static;
+        padding-bottom: 72px;
+    }
 }
 
 .beaches__inner {
@@ -38,8 +50,17 @@
     margin-inline: auto;
 }
 
+@media (width <= 768px) {
+.beaches__inner {
+    padding-bottom: 0px;
+    width: 100%;
+    flex-direction: column;
+    gap: 24px;
+}
+}
+
 .beaches__content {
-    max-width: 53%;
+    max-width: 56%;
     display: flex;
     flex-direction: column;
     gap: 19px;
@@ -47,7 +68,6 @@
 
 @media (width <= 768px) {
     .beaches__content {
-        padding-top: 8px;
         max-width: 100%;
         gap: 8px;
     }
@@ -76,6 +96,7 @@
     .beaches__description {
         font-size: 16px;
         color: var(--dark-brown);
+        max-width: 100%;
     }
 }
 
@@ -99,6 +120,7 @@
 }
 
 .beaches__note {
+    position: static !important;
     max-width: 485px;
     display: flex;
     flex-direction: column;
@@ -112,61 +134,27 @@ background: rgba(72, 73, 77, 0.5);
     text-wrap: balance;
 }
 
-@media (width <=768px) {
-    .beaches__note {
-        position: relative;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-    }
-}
-
-@media (width <=768px) {
-    .beaches__note-title {
-        max-width: 55%;
-    }
-}
-
 .beaches__note-list {
     display: flex;
     flex-direction: column;
     gap: 8px;
-}
-
-.beaches__note-list-item {
-    font-size: 20px;
+        font-size: 20px;
+        line-height: 140%;
     color: var(--white);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    line-height: 140%;
 }
 
-.beaches__note-list-item::before {
-    content: "";
-    margin: 8px 8px 8px 0;
-    display: inline-flex;
-    width: 8px;
-    height: 8px;
-    border-radius: 100%;
-    background-color: var(--white);
-}
-
-.beaches__note-button {
-    display: none;
-}
 
 @media (width <= 768px) {
     .beaches__note {
-        position: absolute;
         max-width: 100%;
         width: 100%;
-        top: 120%;
-        right: 0;
         padding: 16px 16px 14px;
         flex-direction: row;
+        justify-content: space-between;
         gap: 0;
         border-radius: 8px;
+        backdrop-filter: blur(13px);
+background: #848885;
     }
 
     .beaches__note:hover {
@@ -178,8 +166,41 @@ background: rgba(72, 73, 77, 0.5);
     }
 }
 
+.beaches__note-list--modal {
+ display: block;
+ color: var(--dark-brown);
+ padding-left: 16px;
+}
+
+.beaches__note-list-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.beaches__note-list-item::before {
+    content: "";
+    margin: 8px 8px 8px 0;
+    display: inline-flex;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: currentColor;
+}
+
+.beaches__note-button {
+    display: none;
+}
+
+@media (width <= 768px) {
+    .beaches__note-button {
+    display: block;
+}
+}
+
 .beaches__slide {
     align-items: flex-start;
+    gap: 4px;
 }
 
 .beaches__slide--1 {
@@ -208,52 +229,36 @@ line-height: 100%;
 color: var(--white);
 }
 
+@media (width <= 768px) {
+.beaches__slider-title {
+    margin: 0;
+  color: var(--dark-brown);
+  font-size: 32px;
+}
+
+.beaches__slider-title span {
+    display: none;
+}
+}
+
+.beaches__slide-text-mobile {
+    display: none;
+}
+
+@media (width <= 768px) {
+.beaches__slide-text-mobile {
+    display: block;
+    font-size: 16px;
+}
+}
+
 .beaches__slider-pagination {
-    position: absolute;
-    top: 32px;
-    left: 36px;
-    display: flex;
-    gap: 24px;
+
 }
 
 @media (width <= 768px) {
     .beaches__slider-pagination {
-        position: relative;
-        top: 0;
-        left: 0;
-        gap: 8px;
-        padding-block: 16px;
-    }
-}
-
-.beaches__button {
-    font-weight: 500;
-    font-size: 20px;
-    color: var(--white);
-    border-radius: 34px;
-    padding: 16px 27px;
-    border: 1px solid rgba(255, 255, 255, 0.48);
-    backdrop-filter: blur(4px);
-    background: rgba(0, 0, 0, 0.08);
-    text-wrap: nowrap;
-}
-
-@media (width <= 768px) {
-    .beaches__button {
-        font-weight: 400;
-        font-size: 12px;
-        color: var(--dark-brown);
-        border: 1px solid var(--brown);
-        padding: 8px 12px;
-        background: transparent;
-    }
-}
-
-@media (width <= 768px) {
-    .beaches__button.active {
-        color: var(--white);
-        background: var(--brown);
-        border: none;
+        top: clamp(10.75rem, 0.107rem + 47.3vw, 22.813rem);
     }
 }
 

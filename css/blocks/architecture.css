@@ -1,12 +1,20 @@
 .architecture {
-    padding-top: 96px;
     height: 100%;
         background: var(--white);
 }
 .architecture__container {
     padding: 46px 0px 0px;
-        border: 1px solid green;
-        height: 1510px;
+        height: 1434px;
+}
+@media (width <= 768px) {
+    .architecture__container {
+    height: 100%;
+    }
+}
+@media (width <= 360px) {
+    .architecture__container {
+    padding-block: 0px 64px;
+    }
 }
 .architecture__container.container {
     padding-left: 0px !important;
@@ -14,43 +22,105 @@
 .architecture__inner {
     height: 100%;
     position: relative;
+    overflow: hidden;
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
     gap: 83px;
-        border: 1px solid blue;
+}
+@media (width <= 768px) {
+.architecture__inner {
+    flex-direction: column;
+    gap: 40px;
+}
 }
 .architecture__img-wrapper {
     position: relative;
-    height: 100%;
-    width: fit-content;
-    border: 1px solid red;
+    max-width: 888px;
+}
+@media (width <= 768px) {
+    .architecture__img-wrapper {
+        width: 40%;
+    }
+
+    .architecture__inner-top {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+@media (width <= 360px) {
+    .architecture__img-wrapper {
+        width: 100%;
+    }
+.architecture__inner-top {
+    flex-direction: column-reverse;
+}
 }
 .architecture__img {
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     max-height: 1304px;
-    max-width: 888px;
 }
 
 
 .architecture__content {
-    position: sticky;
+    padding-top: 10px;
+    padding-right: 85px;
+    width: 54%;
+    /* position: sticky; */
     top: 0;
     display: flex;
     flex-direction: column;
     gap: 96px;
+}
+@media (width <= 768px) {
+.architecture__content {
+    padding-right: 0px;
+    padding-left: 16px;
+width: 100%;
+flex-direction: row;
+justify-content: space-between;
+gap: 70px;
+}
 }
 .architecture__titles-wrapper {
     display: flex;
     flex-direction: column;
     gap: 66px;
 }
+.architecture__titles-wrapper--mobile {
+    display: none;
+}
+@media (width <= 768px) {
+    .architecture__titles-wrapper--desktop {
+    display: none;
+}
+.architecture__titles-wrapper--mobile {
+    display: block;
+    width: 50%;
+}
+}
+@media (width <= 360px) {
+.architecture__titles-wrapper--mobile {
+    display: block;
+    width: 100%;
+    padding-left: 16px;
+}
+}
+
 .architecture__title {
     font-size: 22px;
 letter-spacing: 0.02em;
 text-transform: uppercase;
 font-weight: 300;
 }
+@media (width <= 768px) {
+.architecture__title {
+    margin-bottom: 24px;
+font-size: 14px;
+}
+}
+
 .architecture__subtitle {
     font-family: var(--second-family);
 font-weight: 300;
@@ -60,13 +130,34 @@ text-transform: uppercase;
 color: var(--for-light-text);
 text-wrap: balance;
 }
-.architecture__subtitle span {
-    color: var(--brown);
+
+@media (width <= 768px) {
+.architecture__subtitle {
+font-size: 28px;
+padding-right: 40px;
 }
+}
+
+@media (width <= 360px) {
+.architecture__subtitle {
+padding-right: 0px;
+}
+}
+
 .architecture__list-wrapper {
     display: flex;
     gap: 39px;
     justify-content: flex-end;
+}
+@media (width <= 768px) {
+    .architecture__list-wrapper {
+        justify-content: space-between;
+    }
+}
+@media (width <= 360px) {
+    .architecture__list-wrapper {
+        flex-direction: column;
+    }
 }
 .architecture__list-text-wrapper {
     width: 45%;
@@ -76,12 +167,30 @@ text-wrap: balance;
     flex-direction: column;
     gap: 32px;
 }
+@media (width <= 768px) {
+    .architecture__list-text-wrapper {
+        width: 100%;
+        font-size: 16px;
+        gap: 16px;
+    }
+}
 .architecture__list-description {
 }
 .architecture__list {
     display: flex;
     flex-direction: column;
     gap: 24px;
+}
+@media (width <= 768px) {
+.architecture__list {
+        padding-right: 40px;
+}
+}
+@media (width <= 360px) {
+.architecture__list {
+        padding-right: 0px;
+    gap: 16px;
+}
 }
 .architecture__list-item {
     display: flex;
@@ -98,20 +207,27 @@ text-wrap: balance;
     background-color: var(--dark-brown);
 }
 .architecture__list-img-wrapper {
-    position: relative;
-border-radius: 800px 800px 0 0;
-overflow: hidden;
+    height: fit-content;
+}
+
+@media (width <= 768px) {
+    .architecture__list-img-wrapper {
+            flex-shrink: 0;
+        width: 40%;
+    }
+}
+
+@media (width <= 360px) {
+    .architecture__list-img-wrapper {
+        width: 100%;
+    }
 }
 
 .architecture__list-img {
 }
 
-.architecture__list-img-wrapper::after {
-    position: absolute;
-    bottom: 0;
-    content: "";
-    display: block;
-    width: 432px;
-    height: 165px;
-    background: url(../../decor/wave-short-white.svg) no-repeat center / cover;
+.architecture__img-wrapper,
+.architecture__content {
+  will-change: transform;
+  transition: transform 0.05s linear;
 }

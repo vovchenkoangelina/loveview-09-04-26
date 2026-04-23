@@ -6,11 +6,33 @@
     padding-block: 120px 79px;
 }
 
+@media (width <= 768px) {
+    .comfort__container {
+    padding-block: 80px 94px;
+}
+}
+
+@media (width <= 360px) {
+    .comfort__container {
+    padding-block: 64px 63px;
+}
+}
+
+
 .comfort__inner {
     padding-right: 109px;
     display: flex;
     flex-direction: column;
     gap: 80px;
+}
+
+@media (width <= 768px) {
+.comfort__inner {
+    padding-right: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
 }
 
 .comfort__title {
@@ -24,9 +46,23 @@
     text-wrap: balance;
 }
 
+@media (width <= 768px) {
+.comfort__subtitle {
+    max-width: 100%;
+}
+}
+
 .comfort__list {
     display: flex;
     gap: 135px;
+}
+
+@media (width <= 768px) {
+.comfort__list {
+    gap: 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
 }
 
 .comfort__list-item {
@@ -36,9 +72,24 @@
     flex: 1;
 }
 
+@media (width <= 768px) {
+.comfort__list-item {
+    gap: 8px;
+    min-width: 244px;
+}
+}
+
 .comfort__list-item-icon-wrapper {
     width: 80px;
     height: 80px;
+    display: flex;
+}
+
+@media (width <= 768px) {
+.comfort__list-item-icon-wrapper {
+    width: 56px;
+    height: 56px;
+}
 }
 
 .comfort__list-item-title {
@@ -52,15 +103,40 @@
     color: var(--light-brown-2);
 }
 
+@media (width <= 768px) {
+.comfort__list-item-title {
+    width: 100%;
+font-size: 24px;
+}
+}
+
 .comfort__list-item-description {
     font-size: 20px;
     color: var(--middle-brown);
+}
+
+@media (width <= 768px) {
+.comfort__list-item-description {
+    font-size: 16px;
+}
 }
 
 .comfort__parking {
     display: flex;
     gap: 106px;
     justify-content: space-between;
+}
+
+@media (width <= 768px) {
+.comfort__parking {
+    gap: 40px;
+}
+}
+
+@media (width <= 360px) {
+.comfort__parking {
+    flex-direction: column;
+}
 }
 
 .comfort__parking-video-wrapper {
@@ -73,12 +149,28 @@
     overflow: hidden;
 }
 
+@media (width <= 768px) {
+.comfort__parking-video-wrapper {
+   padding: 16px;
+}
+}
+@media (width <= 360px) {
+.comfort__parking-video-wrapper {
+   min-height: 426px;
+}
+}
 .comfort__parking-info {
     position: relative;
     display: flex;
     align-items: center;
     gap: 24px;
     z-index: 1;
+}
+
+@media (width <= 768px) {
+.comfort__parking-info {
+    gap: 16px;
+}
 }
 
 .comfort__parking-info:first-of-type {
@@ -97,6 +189,13 @@
     color: var(--brown);
 }
 
+@media (width <= 768px) {
+.comfort__parking-info-number {
+    font-size: 40px;
+}
+}
+
+
 .comfort__parking-info-text {
     font-family: var(--third-family);
     font-weight: 300;
@@ -105,11 +204,19 @@
     color: var(--middle-brown);
 }
 
+@media (width <= 768px) {
+.comfort__parking-info-text {
+    font-size: 14px;
+}
+}
+
 .comfort__parking-video {
     position: absolute;
     top: 0;
     left: 0;
     z-index: 0;
+      object-fit: cover;
+      height: 100%;
 }
 
 .comfort__parking-list {
@@ -117,6 +224,13 @@
     display: flex;
     flex-direction: column;
     gap: 64px;
+}
+
+@media (width <= 360px) {
+    .comfort__parking-list {
+    max-width: 65%;
+    gap: 16px;
+    }
 }
 
 .comfort__parking-list-item {
@@ -130,11 +244,33 @@
     gap: 8px;
 }
 
+@media (width <= 768px) {
+.comfort__parking-list-item {
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 20px;
+    gap: 4px;
+}
+}
+
 .comfort__parking-list-item-icon-wrapper {
     width: 80px;
     height: 80px;
     display: flex;
     align-items: center;
+}
+
+@media (width <= 768px) {
+.comfort__parking-list-item-icon-wrapper {
+    width: 56px;
+    height: 56px;
+}
+}
+
+@media (width <= 768px) {
+.comfort__parking-list-item-icon {
+max-height: 56px;
+}
 }
 
 .comfort__parking-list-item-text {}
