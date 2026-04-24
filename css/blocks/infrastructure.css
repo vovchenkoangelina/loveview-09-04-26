@@ -3,6 +3,7 @@
 }
 
 .infrastructure__container {
+  position: relative;
     padding-block: 120px;
     display: flex;
     justify-content: center;
@@ -33,9 +34,10 @@
 }
 
 .infrastructure__media {
+  top: 32px;
+  position: sticky;
   max-height: 731px;
   width: 39%;
-  position: relative;
   border-radius: 800px 800px 0 0;
   overflow: hidden;
 }

@@ -1,62 +1,46 @@
 export function initArchitectureParallax() {
   const section = document.querySelector('.architecture');
-  const img = document.querySelector('.architecture__img');
+  const img = document.querySelector('.architecture__inner-top');
   const content = document.querySelector('.architecture__content');
 
   if (!section || !img || !content) return;
 
-  const mq = window.matchMedia('(min-width: 1701px)');
-
-  let ticking = false;
-
-  function getProgress(rect, vh) {
-    return Math.min(
-      1,
-      Math.max(0, (vh - rect.top) / (vh * 0.8))
-    );
-  }
-
   function update() {
-    if (!mq.matches) return;
-
     const rect = section.getBoundingClientRect();
-    const vh = window.innerHeight;
+    const windowHeight = window.innerHeight;
 
-    const progress = getProgress(rect, vh);
+    if (rect.bottom < 0 || rect.top > windowHeight) return;
 
-    const imgMove = progress * 160;
-    const contentMove = progress * 280;
+    const sectionHeight = section.offsetHeight;
 
-    img.style.transform = `translate3d(0, ${imgMove}px, 0)`;
-    content.style.transform = `translate3d(0, ${contentMove}px, 0)`;
+    const start = windowHeight * 0.3;
+    const end = -sectionHeight;
 
-    ticking = false;
+    let progress = (start - rect.top) / (start - end);
+    progress = Math.max(0, Math.min(1, progress));
+
+    const maxImgMove = sectionHeight - img.offsetHeight;
+    const maxContentMove = sectionHeight - content.offsetHeight;
+
+    const IMG_SPEED = 1.2;
+    const CONTENT_SPEED = 1.3;
+
+    const imgProgress = Math.min(1, progress * IMG_SPEED);
+    const contentProgress = Math.min(1, progress * CONTENT_SPEED);
+
+    let imgMove = imgProgress * maxImgMove;
+    let contentMove = contentProgress * maxContentMove;
+
+    const IMG_STOP = 301;
+    const CONTENT_STOP = 520;
+
+    imgMove = Math.min(imgMove, IMG_STOP);
+    contentMove = Math.min(contentMove, CONTENT_STOP);
+
+    img.style.transform = `translateY(${imgMove}px)`;
+    content.style.transform = `translateY(${contentMove}px)`;
   }
 
-  function onScroll() {
-    if (!mq.matches) return;
-
-    if (!ticking) {
-      requestAnimationFrame(update);
-      ticking = true;
-    }
-  }
-
-  function reset() {
-    img.style.transform = '';
-    content.style.transform = '';
-  }
-
-  window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', () => {
-    if (!mq.matches) reset();
-    update();
-  });
-
-  mq.addEventListener?.('change', (e) => {
-    if (!e.matches) reset();
-    else update();
-  });
-
+  window.addEventListener('scroll', update, { passive: true });
   update();
 }

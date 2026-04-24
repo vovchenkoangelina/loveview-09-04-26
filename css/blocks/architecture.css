@@ -1,10 +1,14 @@
 .architecture {
+    background:
+    var(--white);
     height: 100%;
-        background: var(--white);
+    height: 1710px;
 }
 .architecture__container {
-    padding: 46px 0px 0px;
-        height: 1434px;
+    position: relative;
+    padding: 0px;
+
+        height: 100%;
 }
 @media (width <= 950px) {
     .architecture__container {
@@ -22,22 +26,32 @@
 .architecture__inner {
     height: 100%;
     position: relative;
-    overflow: hidden;
-    display: flex;
+display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: flex-end;
     gap: 83px;
+    top: 32px;
+    height: 95%;
+    
 }
 @media (width <= 950px) {
 .architecture__inner {
     flex-direction: column;
     gap: 40px;
+    justify-content: space-between;
 }
 }
+
 .architecture__img-wrapper {
     position: relative;
     max-width: 888px;
 }
+ .architecture__inner-top {    
+
+    top: 32px;
+    overflow: visible;
+
+ }
 @media (width <= 950px) {
     .architecture__img-wrapper {
         width: 40%;
@@ -57,17 +71,16 @@
 }
 }
 .architecture__img {
-    /* position: sticky; */
+
     top: 0;
-    max-height: 1304px;
+    height: 1304px;
 }
 
 
-.architecture__content {
-    padding-top: 10px;
+.architecture__content {  
     padding-right: 85px;
     width: 54%;
-    /* position: sticky; */
+
     top: 0;
     display: flex;
     flex-direction: column;
@@ -227,7 +240,7 @@ padding-right: 0px;
 }
 
 .architecture__img-wrapper,
-.architecture__content {
-  will-change: transform;
-  transition: transform 0.05s linear;
+.architecture__content,
+.architecture__list-img-wrapper {
+    will-change: transform;
 }
