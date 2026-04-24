@@ -30,6 +30,7 @@
 
 .about__title {
     color: var(--brand-brown);
+    margin-bottom: 51px;
 }
 @media (width <= 360px) {
 .about__title {
@@ -128,11 +129,13 @@ text-wrap: nowrap;
 }
 }
 .about__list-item-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     font-size: 22px;
 letter-spacing: 0.02em;
 text-transform: uppercase;
 color: var(--brand-brown);
-line-height: 28px;
 }
 @media (width <= 970px) {
 .about__list-item-text {
@@ -140,8 +143,9 @@ line-height: 28px;
 }
 }
 .about__content {
+    padding-top: 5px;
     max-width: 47%;
-    padding-left: 25px;
+    padding-left: 35px;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -163,9 +167,13 @@ line-height: 28px;
     height: 48px;
 }
 }
+.about__content-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
 .about__content-text {
     font-size: 20px;
-    line-height: 26px;
 color: var(--for-light-text);
 }
 @media (width <= 970px) {

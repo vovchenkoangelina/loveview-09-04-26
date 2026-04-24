@@ -21,7 +21,7 @@
 }
 
 .infrastructure__inner {
-    width: 80%;
+    width: 83%;
     display: flex;
     gap: 167px;
 }
@@ -34,7 +34,7 @@
 
 .infrastructure__media {
   max-height: 731px;
-  width: 41%;
+  width: 39%;
   position: relative;
   border-radius: 800px 800px 0 0;
   overflow: hidden;
@@ -86,6 +86,7 @@
 }
 
 .infrastructure__accordion {
+  padding-top: 32px;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -100,6 +101,7 @@
 }
 
 .infrastructure__title {
+  padding-right: 35px;
 font-family: var(--second-family);
 font-weight: 300;
 font-size: 36px;
@@ -115,7 +117,7 @@ font-size: 24px;
 }
 
 .infrastructure__item {
-  padding-block: 30px;
+  padding-block: 30px 32px;
   border-bottom: 1px solid var(--dark-brown);
   transition: max-height var(--transition-time) ease-out;
 }
@@ -135,7 +137,7 @@ max-height: 500px;
   font-size: 22px;
 letter-spacing: 0.02em;
 text-transform: uppercase;
-color: var(--brand-brown);
+color: var(--brown-darken);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -146,7 +148,6 @@ color: var(--brand-brown);
 @media (width <= 1350px) {
   .infrastructure__summary {
 font-size: 14px;
-line-height: 100%;
   }
 }
 
@@ -155,7 +156,7 @@ color: var(--brown-darken);
 }
 
 .infrastructure__content {
-  margin-top: 22px;
+  margin-top: 16px;
   padding-right: 40px;
   font-family: var(--third-family);
 font-weight: 400;

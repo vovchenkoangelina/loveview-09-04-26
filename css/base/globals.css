@@ -165,7 +165,7 @@ font-size: 28px;
 .laview-slider__slide {
   position: relative;
   overflow: hidden;
-  min-height: 850px;
+  min-height: 900px;
   display: flex !important;
   align-items: flex-end;
 }
@@ -340,7 +340,7 @@ border: 1px solid var(--brown);
   width: 100%;
   display: flex;
   justify-content: space-between;
-  top: 50%;
+  top: 45%;
   transform: translateY(-50%);
   z-index: 1;
 }

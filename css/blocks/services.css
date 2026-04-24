@@ -34,7 +34,7 @@ flex-direction: column;
 }
 }
 .services__title {
-
+margin-bottom: 40px;
 }
 .services__subtitle {}
 .services__number {
@@ -122,6 +122,11 @@ color: var(--for-light-text);
     font-size: 24px;
 }
 }
+.services__content-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 .services__content-text {
     font-size: 20px;
     line-height: 26px;
@@ -133,7 +138,7 @@ font-size: 16px;
 }
 }
 .services__content-list {
-    padding-block: 16px;
+    padding-block: 16px 48px;
     display: flex;
     justify-content: space-between;
 }

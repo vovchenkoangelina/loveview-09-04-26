@@ -140,6 +140,7 @@ font-size: 24px;
 }
 
 .comfort__parking-video-wrapper {
+    min-height: 573px;
     flex: 1;
     position: relative;
     padding: 44px;
