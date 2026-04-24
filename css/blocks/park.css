@@ -11,8 +11,11 @@
 }
 
 .park__container {
-    padding: 183px 152px 152px;
+    min-height: 850px;
     background: url(../../images/Img-park.jpg) no-repeat center / cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (width <=1500px) {
@@ -49,7 +52,10 @@
 }
 
 .park__inner {
+    max-width: 83%;
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 50px;
 }
 
@@ -68,6 +74,7 @@
 
 .park__content {
     /* padding-right: 86px; */
+    max-width: 60%;
 }
 
 @media (width <=1200px) {
@@ -81,6 +88,14 @@
     .park__content {
         max-width: 100%;
     }
+}
+
+.park__title-number {
+    font-family: var(--second-family);
+    color: var(--white);
+    font-weight: 200;
+    font-size: 200px;
+    line-height: 100%;
 }
 
 .park__title {
@@ -99,11 +114,7 @@
     }
 }
 
-.park__title span {
-    font-weight: 200;
-    line-height: 110%;
-    font-size: 200px;
-}
+
 
 @media (width <=1200px) {
     .park__title span {
@@ -113,9 +124,8 @@
 }
 
 .park__description {
-    font-weight: 400;
+    font-weight: 300;
     font-size: 20px;
-    line-height: 150%;
     color: var(--white);
 }
 
@@ -127,8 +137,8 @@
 }
 
 .park__note {
-    padding: 28px;
-    max-width: 33%;
+    padding: 28px 28px 52px 28px;
+    max-width: 32.5%;
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -179,7 +189,6 @@
 
 .park__note-description {
     font-size: 20px;
-    line-height: 130%;
     color: var(--light-brown-2);
     text-wrap: pretty;
 }

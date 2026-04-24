@@ -74,11 +74,16 @@ top: 290px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--brand-brown);
+    color: var(--dark-brown);
     border-radius: 100%;
     border: 1px solid var(--middle-brown);
     background: var(--white);
     z-index: 20;
+    transition: color var(--transition-time) ease-out;
+}
+
+.map__zoom-button:hover {
+    color: var(--brown-darken);;
 }
 
 @media (width <=1180px) {
@@ -91,7 +96,9 @@ top: 290px;
     }
 }
 
-.map__zoom-icon {}
+.map__zoom-icon {
+    
+}
 
 @media (width <=1180px) {
     .map__zoom-icon {
@@ -201,14 +208,15 @@ top: 290px;
 }
 
 .map__container {
-    padding: 200px 81px 90px;
+        min-height: 1148px;
+    /* padding: 200px 81px 90px; */
     display: flex;
     justify-content: flex-end;
 }
 
 @media (width <=1700px) {
     .map__container {
-        padding: 40px 0px 60px;
+        /* padding: 40px 0px 60px; */
     }
 }
 
@@ -233,9 +241,11 @@ top: 290px;
 }
 
 .map__inner {
+    padding-bottom: 135px;
     max-width: 33.2%;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     gap: 42px;
 }
 
@@ -271,13 +281,7 @@ top: 290px;
 }
 
 .map__title {
-    font-family: var(--second-family);
-    font-size: 36px;
-    line-height: 124%;
-    letter-spacing: 0.01em;
-    text-transform: uppercase;
-    color: var(--dark-brown);
-    text-wrap: balance;
+
 }
 
 @media (width <=1930px) {
@@ -344,7 +348,6 @@ top: 290px;
     min-width: 100%;
     width: 100%;
   flex-shrink: 0;
-  /* padding-right: 157px;  */
 }
 
 @media (width <=1180px) {
@@ -374,7 +377,10 @@ top: 290px;
     }
 }
 
-.map__walking-icon {}
+.map__walking-icon {
+    color: var(--brand-brown);
+    transition: opacity var(--transition-time) ease-out;
+}
 
 @media (width <=1180px) {
     .map__walking-icon {
@@ -423,7 +429,10 @@ top: 290px;
     }
 }
 
-.map__car-icon {}
+.map__car-icon {
+    color: var(--brand-brown);
+    transition: opacity var(--transition-time) ease-out;
+}
 
 @media (width <=1180px) {
     .map__car-icon {
@@ -443,6 +452,11 @@ top: 290px;
     justify-content: center;
     align-items: center;
     background: var(--white);
+    transition: color var(--transition-time) ease-out;
+}
+
+.map__button:hover {
+    color: var(--brown-darken);
 }
 
 @media (width <=1180px) {
@@ -476,4 +490,9 @@ top: 290px;
 .map__button-text {
     align-self: center;
     line-height: 100%;
+}
+
+.map__info-section:hover .map__walking-icon,
+.map__info-section:hover .map__car-icon {
+  opacity: 10%;
 }

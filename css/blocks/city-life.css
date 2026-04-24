@@ -98,6 +98,7 @@ transition: color var(--transition-time) ease-out;
 color: var(--light-brown-1);
 }
 .city-life__list {
+    max-width: 42%;
     flex: 1;
     display: flex;
     flex-direction: column;
