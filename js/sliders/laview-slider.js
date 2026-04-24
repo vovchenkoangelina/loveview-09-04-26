@@ -15,7 +15,6 @@ export function initLaviewSliders() {
       },
     });
 
-    // Кнопки пагинации (если есть)
     const buttons = sliderEl.querySelectorAll('[data-slide]');
     const bgImages = sliderEl.querySelectorAll('.laview-slider__bg-img');
 
@@ -31,7 +30,7 @@ export function initLaviewSliders() {
       }
     }
 
-    // Клик по кнопкам
+
     buttons.forEach((btn) => {
       btn.addEventListener('click', () => {
         const index = Number(btn.dataset.slide);

@@ -10,6 +10,8 @@ import { initLaviewSliders } from './sliders/laview-slider.js';
 import { initApartmentPopup } from './apartment-popup.js';
 import { initLoviewVideoObserver } from './loview-video.js';
 import { initInfrastructureAccordion } from './infrastructure.js';
+import { initLightbox } from './apartment-popup.js';
+import { initCallbackPopup } from './callback.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initHeaderMenu();
@@ -24,4 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initApartmentPopup();
   initInfrastructureAccordion();
   initLoviewVideoObserver();
+  initLightbox();
+  initCallbackPopup();
 });
